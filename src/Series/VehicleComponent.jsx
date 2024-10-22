@@ -9,7 +9,7 @@ import v2 from '../../src/website product/V80WHITE.png';
 import g1 from '../../src/website product/G80silver.png';
 import g2 from '../../src/website product/G80white.png';
 import z1 from '../../src/website product/Z80RED.png';
-import z2 from '../../src/website product/Z80WHITE.jpg';
+import z2 from '../../src/website product/Z80WHITE.JPG';
 import d1 from '../../src/website product/D80 red.png';
 import d2 from '../../src/website product/D80 white.png';
 import d3 from '../../src/website product/D80 blue.png';

@@ -139,7 +139,7 @@ const DesignPerformanceTabs = () => {
     <>
       <Box sx={{ 
         width: '100%', 
-        backgroundColor: '#F5F5F5', 
+        backgroundColor: 'aliceblue', 
         padding: { xs: '8px', sm: '16px', md: '24px' }, 
         marginBottom: '30px',
       }}>
@@ -148,20 +148,21 @@ const DesignPerformanceTabs = () => {
           value={tabValue} 
           onChange={handleTabChange} 
           centered 
-          TabIndicatorProps={{ style: { backgroundColor: '#1976d2' } }}
+          TabIndicatorProps={{ style: { backgroundColor: 'green' } }}
           sx={{ 
             '& .MuiTab-root': {
-              fontSize: { xs: '1rem', sm: '1.5rem', md: '2rem' }, // Font size adjusts based on screen size
+              fontSize: { xs: '1rem', sm: '1.5rem', md: '2.5rem' }, // Font size adjusts based on screen size
               textTransform: 'none',
               border: 'none', // Remove border
               outline: 'none', // Remove outline
+              fontWeight:'600'
             },
             '& .Mui-selected': {
-              color: '#1976d2',
+              color: '#030202',
               borderBottom: 'none', // Remove border from the active tab
             },
             '& .MuiTab-root:hover': {
-              color: '#1976d2', // Hover color for tabs
+              color: '#3b3636', // Hover color for tabs
             }
           }}
         >
@@ -184,7 +185,7 @@ const DesignPerformanceTabs = () => {
           align="center" 
           gutterBottom 
           sx={{ 
-            fontWeight: 'bold', 
+            fontWeight: '700', 
             fontSize: { xs: '1.5rem', sm: '2rem', md: '2.5rem' }, 
           }}
         >
