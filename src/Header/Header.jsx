@@ -8,7 +8,7 @@ import RegisterIcon from '@mui/icons-material/AppRegistration';
 import VerifiedUserIcon from '@mui/icons-material/VerifiedUser';
 import StoreIcon from '@mui/icons-material/Store';
 import MenuIcon from '@mui/icons-material/Menu';
-import LocalOfferIcon from '@mui/icons-material/LocalOffer'; // Offer Icon
+// import LocalOfferIcon from '@mui/icons-material/LocalOffer'; // Offer Icon
 import logo from '../assets/logo.gif';
 
 const Header = () => {
@@ -48,11 +48,11 @@ const Header = () => {
             <ListItemText primary={text} />
           </ListItem>
         ))}
-        <ListItem button>
-          {/* Offer NavLink with icon */}
+        {/* <ListItem button>
+         
           <LocalOfferIcon sx={{ marginRight: 1 }} />
           <ListItemText primary="Offer" />
-        </ListItem>
+        </ListItem> */}
       </List>
     </Box>
   );
@@ -84,9 +84,9 @@ const Header = () => {
       )}
 
       {/* Second Layer: Search Bar and Icons */}
-      <Toolbar sx={{ display: 'flex', justifyContent: 'space-between', borderBottom: '1px solid #eee', padding: '10px 0' }}>
+      <Toolbar sx={{ display: 'flex', justifyContent: 'space-between',      justifyContent: 'center',borderBottom: '1px solid #eee', padding: '2px 0' }}>
         {/* Search Bar */}
-        <Box sx={{ display: 'flex', alignItems: 'center', width: { xs: '70%', md: '60%' } }}>
+        <Box sx={{ display: 'flex', alignItems: 'center', width: { xs: '50%', md: '40%' } }}>
           <InputBase
             placeholder={searchPlaceholder}
             startAdornment={<SearchIcon />}
@@ -108,7 +108,7 @@ const Header = () => {
           <Button
             startIcon={<VideoCallIcon />}
             sx={{
-              fontSize: '16px',
+              fontSize: '10px',
               color: 'black',
               '&:hover': {
                 color: 'green',
@@ -120,7 +120,7 @@ const Header = () => {
           <Button
             startIcon={<RegisterIcon />}
             sx={{
-              fontSize: '16px',
+              fontSize: '10px',
               color: 'black',
               '&:hover': {
                 color: 'green',
@@ -132,7 +132,7 @@ const Header = () => {
           <Button
             startIcon={<StoreIcon />}
             sx={{
-              fontSize: '16px',
+              fontSize: '10px',
               color: 'black',
               '&:hover': {
                 color: 'green',
@@ -144,7 +144,7 @@ const Header = () => {
           <Button
             startIcon={<VerifiedUserIcon />}
             sx={{
-              fontSize: '16px',
+              fontSize: '10px',
               color: 'black',
               '&:hover': {
                 color: 'green',
@@ -155,7 +155,7 @@ const Header = () => {
           </Button>
           <IconButton
             sx={{
-              fontSize: '16px',
+              fontSize: '10px',
               color: 'black',
               '&:hover': {
                 color: 'green',
@@ -179,32 +179,34 @@ const Header = () => {
       </Toolbar>
 
       {/* Third Line: Logo and Nav Links */}
-      <Toolbar sx={{ display: 'flex', justifyContent: 'space-between', padding: '10px 0' }}>
+      <Toolbar sx={{ display: 'flex', justifyContent: 'space-between', padding: '2px 0' }}>
         <Box>
           <img
             src={logo}
             alt="Logo"
             style={{
-              height: '80px', // Default size for larger screens
-              width: '400px',
+              height: '70px', // Default size for larger screens
+              width: '450px',
             }}
             sx={{
-              width: { xs: '150px', sm: '200px', md: '300px', lg: '600px' }, // Responsive width
-              height: { xs: '40px', sm: '50px', md: '70px', lg: '80px' }, // Responsive height
+              width: { xs: '150px', sm: '200px', md: '300px', lg: '400px' }, // Responsive width
+              height: { xs: '40px', sm: '50px', md: '50px', lg: '60px' }, // Responsive height
             }}
           />
         </Box>
 
         {/* Navigation Links with Hover Effect */}
-        <Box sx={{ display: { xs: 'none', md: 'flex' }, gap: '22px' }}>
+        <Box sx={{ display: { xs: 'none', md: 'flex' }, gap: '18px' }}>
           {NavBarLinks.map((link, index) => (
             <Button
               key={index}
               color="inherit"
               sx={{
-                fontSize: '20px',
-                fontWeight: 'semibold',
+                fontSize: '15px',
+                textTransform:'none',
+              
                 position: 'relative',
+                fontWeight:'500',
                 '&::before': {
                   content: '""',
                   position: 'absolute',
@@ -225,7 +227,7 @@ const Header = () => {
             </Button>
           ))}
           {/* Offer NavLink with Image/Icon */}
-          <Button
+          {/* <Button
             sx={{
               fontSize: '20px',
               color: 'green',
@@ -250,7 +252,7 @@ const Header = () => {
             startIcon={<LocalOfferIcon />}
           >
             Offer
-          </Button>
+          </Button> */}
         </Box>
       </Toolbar>
 

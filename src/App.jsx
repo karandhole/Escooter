@@ -14,6 +14,7 @@ import Banner from './Baner/Baner'
 
 import VedioSection from './VedioSection/VedioSection'
 import ImageCarousel from './ImageSection/ImageCarousel'
+import IconBar from './HeroSection/IconBar'
 
 
 
@@ -23,6 +24,7 @@ function App() {
   return (
     <>
       <Header/>
+      <IconBar/>
       <Slider/>
       <VehicleComponent/>
       <ContactForm/>

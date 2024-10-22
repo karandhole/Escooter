@@ -94,17 +94,21 @@ const ImageSlider = () => {
             left: '10px', // Position it to the left side
             zIndex: 10,
             color: 'black',
-            width: '40px', // Set width
-            height: '40px', // Set height
+            width: '35px', // Set width
+            height: '35px', // Set height
+            paddingLeft:'15px',
             transform: 'translateY(-50%)', // Center vertically
             backgroundColor: 'white', // Optional: make it stand out more
             borderRadius: '50%', // Circular button
+            display: 'flex', // Flex to center content
+            alignItems: 'center', // Center the icon vertically
+           justifyContent: 'center', // Center the icon horizontally
             '&:hover': {
               backgroundColor: '#f0f0f0', // Change color on hover
             },
             '@media (max-width: 600px)': {
-              width: '30px', // Smaller width for mobile
-              height: '30px', // Smaller height for mobile
+              width: '25px', // Smaller width for mobile
+              height: '25px', // Smaller height for mobile
             },
           }}
           onClick={() => {
@@ -113,7 +117,7 @@ const ImageSlider = () => {
             }
           }}
         >
-          <ArrowBackIos sx={{ fontSize: '24px' }} />
+          <ArrowBackIos sx={{ fontSize: '20px' }} />
         </IconButton>
 
         {/* Custom Next Button */}
@@ -124,17 +128,20 @@ const ImageSlider = () => {
             right: '10px', // Position it to the right side
             zIndex: 10,
             color: 'black',
-            width: '40px', // Set width
-            height: '40px', // Set height
+            width: '35px', // Set width
+            height: '35px', // Set height
             transform: 'translateY(-50%)', // Center vertically
             backgroundColor: 'white', // Optional: make it stand out more
             borderRadius: '50%', // Circular button
+            display: 'flex', // Flex to center content
+            alignItems: 'center', // Center the icon vertically
+            justifyContent: 'center', // Center the icon horizontally
             '&:hover': {
               backgroundColor: '#f0f0f0', // Change color on hover
             },
             '@media (max-width: 600px)': {
-              width: '30px', // Smaller width for mobile
-              height: '30px', // Smaller height for mobile
+              width: '25px', // Smaller width for mobile
+              height: '25px', // Smaller height for mobile
             },
           }}
           onClick={() => {
@@ -143,7 +150,7 @@ const ImageSlider = () => {
             }
           }}
         >
-          <ArrowForwardIos sx={{ fontSize: '24px' }} />
+          <ArrowForwardIos sx={{ fontSize: '20px' }} />
         </IconButton>
       </Swiper>
     </Box>

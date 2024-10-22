@@ -28,7 +28,7 @@ const Footer = () => {
             <img 
               src={logo} 
               alt="91 Logo" 
-              style={{ width: '350px', height: 'auto', marginBottom: '10px' }} 
+              style={{ width: '300px', height: 'auto', marginBottom: '10px' }} 
             />
             <Typography variant="h6" sx={{ fontWeight: 'bold', marginBottom: '10px', color: 'green',fontFamily:'serif',fontSize:'25px' }}>
               EXER MOBILITY
@@ -108,7 +108,7 @@ const Footer = () => {
           <Typography variant="h6" sx={{ fontWeight: 'bold', marginBottom: '23px', textAlign: { xs: 'center', md: 'left' } }}>
             Follow Us
           </Typography>
-          <Box sx={{ display: 'flex', justifyContent: { xs: 'center', md: 'start' }, gap: '15px' }}>
+          <Box sx={{ display: 'flex', justifyContent: { xs: 'center', md: 'start' }, gap: '10px' }}>
             <IconButton href="#" sx={{ color: 'black' }}>
               <LinkedInIcon />
             </IconButton>
