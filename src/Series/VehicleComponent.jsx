@@ -329,31 +329,45 @@ const VehicleComponent = () => {
           }}
         >
           <Typography variant="h6" sx={{ fontWeight: 'bold', fontSize: '22px' }}>
-            Select Color
-          </Typography>
-          <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '15px' }}>
-            {Object.keys(colorImageMap[selectedSubSeries]).map((color) => (
-              <Box
-                key={color}
-                onClick={() => handleColorChange(color)}
-                sx={{ display: 'flex', flexDirection: 'row',gap:'5px', alignItems: 'center',padding:'8px',boxShadow:'initial', borderRadius:'10px', cursor: 'pointer',border:'solid 1px #9b9898' }}
-              >
-                 <Typography variant="body2" sx={{ fontSize: '20px', fontStyle:'italic' }}>
-                  {color}
-                </Typography>
-                <Box
-                  sx={{
-                    width: '30px',
-                    height: '30px',
-                    borderRadius: '50%',
-                    backgroundColor: color.toLowerCase(),
-                    border: selectedColor === color ? '2px solid green' : 'none',
-                  }}
-                />
-               
-              </Box>
-            ))}
+        Select Color
+      </Typography>
+      <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '15px' }}>
+        {Object.keys(colorImageMap[selectedSubSeries]).map((color) => (
+          <Box
+            key={color}
+            onClick={() => handleColorChange(color)}
+            sx={{
+              display: 'flex',
+              flexDirection: 'row',
+              gap: '5px',
+              alignItems: 'center',
+              minWidth: '90px',
+              padding: '4px',
+              boxShadow: 'initial',
+              borderRadius: '10px',
+              cursor: 'pointer',
+              border: 'solid 1px #9b9898',
+              backgroundColor: selectedColor === color ? '#D3D3D3' : 'transparent', // Light grey when selected
+              '&:hover': {
+                backgroundColor: selectedColor === color ? '#D3D3D3' : '#f0f0f0', // Light grey when hovered if not selected
+              },
+            }}
+          >
+            <Typography variant="body2" sx={{ fontSize: '16px', fontStyle: 'normal' }}>
+              {color}
+            </Typography>
+            <Box
+              sx={{
+                width: '30px',
+                height: '30px',
+                borderRadius: '50%',
+                backgroundColor: color.toLowerCase(),
+                border: selectedColor === color ? '2px solid green' : 'none',
+              }}
+            />
           </Box>
+        ))}
+      </Box>
         </Box>
       </Box>
 

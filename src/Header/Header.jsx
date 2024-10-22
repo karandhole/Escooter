@@ -1,5 +1,17 @@
 import React, { useState, useEffect } from 'react';
-import { AppBar, Toolbar, IconButton, Typography, InputBase, Box, Button, Drawer, List, ListItem, ListItemText } from '@mui/material';
+import {
+  AppBar,
+  Toolbar,
+  IconButton,
+  Typography,
+  InputBase,
+  Box,
+  Button,
+  Drawer,
+  List,
+  ListItem,
+  ListItemText
+} from '@mui/material';
 import CloseIcon from '@mui/icons-material/Close';
 import SearchIcon from '@mui/icons-material/Search';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
@@ -8,7 +20,6 @@ import RegisterIcon from '@mui/icons-material/AppRegistration';
 import VerifiedUserIcon from '@mui/icons-material/VerifiedUser';
 import StoreIcon from '@mui/icons-material/Store';
 import MenuIcon from '@mui/icons-material/Menu';
-// import LocalOfferIcon from '@mui/icons-material/LocalOffer'; // Offer Icon
 import logo from '../assets/logo.gif';
 
 const Header = () => {
@@ -43,16 +54,11 @@ const Header = () => {
   const drawer = (
     <Box sx={{ width: 250 }}>
       <List>
-        {NavBarLinks.map((text, index) => (
+        {NavBarLinks.map((text) => (
           <ListItem button key={text}>
             <ListItemText primary={text} />
           </ListItem>
         ))}
-        {/* <ListItem button>
-         
-          <LocalOfferIcon sx={{ marginRight: 1 }} />
-          <ListItemText primary="Offer" />
-        </ListItem> */}
       </List>
     </Box>
   );
@@ -74,19 +80,16 @@ const Header = () => {
           <Typography sx={{ position: 'absolute', left: '50%', transform: 'translateX(-50%)', fontSize: '16px' }}>
             Grand Festive Sale is live!
           </Typography>
-          <IconButton
-            onClick={handleCloseBanner}
-            sx={{ position: 'absolute', right: 0 }} // Keep the close button on the right
-          >
+          <IconButton onClick={handleCloseBanner} sx={{ position: 'absolute', right: 0 }}>
             <CloseIcon />
           </IconButton>
         </Box>
       )}
 
       {/* Second Layer: Search Bar and Icons */}
-      <Toolbar sx={{ display: 'flex', justifyContent: 'space-between',      justifyContent: 'center',borderBottom: '1px solid #eee', padding: '2px 0' }}>
+      <Toolbar sx={{ display: 'flex', justifyContent: 'space-between', borderBottom: '1px solid #eee', padding: '2px 0' }}>
         {/* Search Bar */}
-        <Box sx={{ display: 'flex', alignItems: 'center', width: { xs: '50%', md: '40%' } }}>
+        <Box sx={{ display: 'flex', alignItems: 'center', paddingLeft:'140px', width: { xs: '50%', md: '40%' } }}>
           <InputBase
             placeholder={searchPlaceholder}
             startAdornment={<SearchIcon />}
@@ -103,7 +106,7 @@ const Header = () => {
           />
         </Box>
 
-        {/* Icons with Hover Effect */}
+        {/* Icons with Hover Effect moved here */}
         <Box sx={{ display: { xs: 'none', md: 'flex' }, alignItems: 'center', gap: '20px' }}>
           <Button
             startIcon={<VideoCallIcon />}
@@ -185,12 +188,8 @@ const Header = () => {
             src={logo}
             alt="Logo"
             style={{
-              height: '70px', // Default size for larger screens
+              height: '70px',
               width: '450px',
-            }}
-            sx={{
-              width: { xs: '150px', sm: '200px', md: '300px', lg: '400px' }, // Responsive width
-              height: { xs: '40px', sm: '50px', md: '50px', lg: '60px' }, // Responsive height
             }}
           />
         </Box>
@@ -203,10 +202,9 @@ const Header = () => {
               color="inherit"
               sx={{
                 fontSize: '15px',
-                textTransform:'none',
-              
+                textTransform: 'none',
                 position: 'relative',
-                fontWeight:'500',
+                fontWeight: '500',
                 '&::before': {
                   content: '""',
                   position: 'absolute',
@@ -226,33 +224,6 @@ const Header = () => {
               {link}
             </Button>
           ))}
-          {/* Offer NavLink with Image/Icon */}
-          {/* <Button
-            sx={{
-              fontSize: '20px',
-              color: 'green',
-              fontWeight: 'bold',
-              fontFamily: 'serif',
-              position: 'relative',
-              '&::before': {
-                content: '""',
-                position: 'absolute',
-                width: '0%',
-                height: '2px',
-                bottom: 0,
-                left: '50%',
-                backgroundColor: 'green',
-                transition: 'width 0.3s ease, left 0.3s ease',
-              },
-              '&:hover::before': {
-                width: '100%',
-                left: 0,
-              },
-            }}
-            startIcon={<LocalOfferIcon />}
-          >
-            Offer
-          </Button> */}
         </Box>
       </Toolbar>
 
