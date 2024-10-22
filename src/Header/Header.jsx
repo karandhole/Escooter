@@ -189,7 +189,7 @@ const Header = () => {
             alt="Logo"
             style={{
               height: '80px',
-              width: '300px',
+              width: '250px',
             }}
           />
         </Box>
