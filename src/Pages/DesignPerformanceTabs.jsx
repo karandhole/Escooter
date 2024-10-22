@@ -2,23 +2,17 @@ import React, { useState } from 'react';
 import { Box, Tabs, Tab, Grid, Card, CardMedia, CardContent, Typography } from '@mui/material';
 import Zoom from 'react-medium-image-zoom';
 import 'react-medium-image-zoom/dist/styles.css'; 
-import images1 from '../assets/images1-removebg-preview.png'
- 
+import images1 from '../assets/images1-removebg-preview.png';
 import images2 from '../assets/images2__2_-removebg-preview.png';
 import images3 from '../assets/images3__2_-removebg-preview.png';
 import images4 from '../assets/images4-removebg-preview.png';
-//import images5 from '../assets/images5-removebg-preview.png';
-
 import images6 from '../assets/images6 (1).png';
 import images7 from '../assets/images7 (1).png';
 import images8 from '../assets/images8 (1).png';
 import images9 from '../assets/images9 (1).png';
-//import images10 from '../assets/images10 (1).png';
-
-import img11 from '../assets/img11-removebg-preview.png'
-import img12 from '../assets/img12-removebg-preview.png'
-import img13 from '../assets/img13-removebg-preview.png'
-
+import img11 from '../assets/img11-removebg-preview.png';
+import img12 from '../assets/img12-removebg-preview.png';
+import img13 from '../assets/img13-removebg-preview.png';
 
 const images = {
   design: [
@@ -42,7 +36,6 @@ const images = {
       subtitle: "STABLE RIDE ON ANY TERRAIN",
       imageUrl: images4,
     },
-    
   ],
   performance: [
     {
@@ -65,7 +58,6 @@ const images = {
       subtitle: "HIGH-CAPACITY LI-ON & LEAD ACID OPTIONS",
       imageUrl: images9,
     },
-    
   ],
 };
 
@@ -108,10 +100,19 @@ const ImageCard = ({ title, subtitle, imageUrl }) => (
       />
     </Zoom>
     <CardContent>
-      <Typography gutterBottom variant="h6" component="div">
+      <Typography 
+        gutterBottom 
+        variant="h6" 
+        component="div" 
+        sx={{ fontWeight: '700' }} // Increased font weight for the title
+      >
         {title}
       </Typography>
-      <Typography variant="body2" color="text.secondary">
+      <Typography 
+        variant="body2" 
+        color="text.secondary" 
+        sx={{ fontWeight: '500' }} // Increased font weight for the subtitle
+      >
         {subtitle}
       </Typography>
     </CardContent>
@@ -121,7 +122,7 @@ const ImageCard = ({ title, subtitle, imageUrl }) => (
 const ImageGallery = ({ category }) => (
   <Grid container spacing={2} justifyContent="center">
     {images[category].map((item, index) => (
-      <Grid item xs={12} sm={6} md={4} lg={3} key={index}> {/* Responsive breakpoints for mobile, tablet, and desktop */}
+      <Grid item xs={12} sm={6} md={4} lg={3} key={index}>
         <ImageCard {...item} />
       </Grid>
     ))}
@@ -143,7 +144,6 @@ const DesignPerformanceTabs = () => {
         padding: { xs: '8px', sm: '16px', md: '24px' }, 
         marginBottom: '30px',
       }}>
-        {/* Tabs */}
         <Tabs 
           value={tabValue} 
           onChange={handleTabChange} 
@@ -151,34 +151,29 @@ const DesignPerformanceTabs = () => {
           TabIndicatorProps={{ style: { backgroundColor: 'green' } }}
           sx={{ 
             '& .MuiTab-root': {
-              fontSize: { xs: '1rem', sm: '1.5rem', md: '2.5rem' }, // Font size adjusts based on screen size
+              fontSize: { xs: '1rem', sm: '1.5rem', md: '2.5rem' }, 
               textTransform: 'none',
-              border: 'none', // Remove border
-              outline: 'none', // Remove outline
-              fontWeight:'600',
-              color:'#706e68'
+              fontWeight: '600',
+              color: '#706e68',
             },
             '& .Mui-selected': {
               color: '#030202',
-              borderBottom: 'none', // Remove border from the active tab
             },
             '& .MuiTab-root:hover': {
-              color: '#3b3636', // Hover color for tabs
-            }
+              color: '#3b3636',
+            },
           }}
         >
           <Tab label="Design" disableRipple />
           <Tab label="Performance" disableRipple />
         </Tabs>
 
-        {/* Tab Panels */}
         <Box sx={{ padding: 3 }}>
           {tabValue === 0 && <ImageGallery category="design" />}
           {tabValue === 1 && <ImageGallery category="performance" />}
         </Box>
       </Box>
 
-      {/* Salient Features Section */}
       <Box sx={{ padding: { xs: '20px', sm: '40px' }, backgroundColor: '#fff' }}>
         <Typography 
           variant="h4" 
@@ -186,7 +181,7 @@ const DesignPerformanceTabs = () => {
           align="center" 
           gutterBottom 
           sx={{ 
-            fontWeight: '700', 
+            fontWeight: '700', // Increased font weight for SALIENT FEATURES title
             fontSize: { xs: '1.5rem', sm: '2rem', md: '2.5rem' }, 
           }}
         >
@@ -207,7 +202,7 @@ const DesignPerformanceTabs = () => {
                     variant="h6" 
                     component="div" 
                     sx={{ 
-                      fontWeight: 'bold', 
+                      fontWeight: '700', // Increased font weight for feature titles
                       fontSize: { xs: '1rem', sm: '1.5rem', md: '1.7rem' },
                     }}
                   >
