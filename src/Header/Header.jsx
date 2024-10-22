@@ -20,7 +20,7 @@ import RegisterIcon from '@mui/icons-material/AppRegistration';
 import VerifiedUserIcon from '@mui/icons-material/VerifiedUser';
 import StoreIcon from '@mui/icons-material/Store';
 import MenuIcon from '@mui/icons-material/Menu';
-import logo from '../assets/logo.gif';
+import logo from '../assets/logo3.gif';
 
 const Header = () => {
   const [showBanner, setShowBanner] = useState(true);
@@ -188,8 +188,8 @@ const Header = () => {
             src={logo}
             alt="Logo"
             style={{
-              height: '70px',
-              width: '450px',
+              height: '80px',
+              width: '300px',
             }}
           />
         </Box>

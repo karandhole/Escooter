@@ -193,7 +193,7 @@ const DesignPerformanceTabs = () => {
               <Card sx={{ textAlign: 'center', padding: 2 }}>
                 <CardMedia
                   component="img"
-                  height="290"
+                  height="400"
                   image={feature.img}
                   alt={feature.title}
                 />
