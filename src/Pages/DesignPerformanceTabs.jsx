@@ -155,7 +155,8 @@ const DesignPerformanceTabs = () => {
               textTransform: 'none',
               border: 'none', // Remove border
               outline: 'none', // Remove outline
-              fontWeight:'600'
+              fontWeight:'600',
+              color:'#706e68'
             },
             '& .Mui-selected': {
               color: '#030202',

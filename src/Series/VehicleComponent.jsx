@@ -18,6 +18,10 @@ import y1 from '../../src/website product/Y80silver.jpeg';
 import y2 from '../../src/website product/Y80 white.png';
 import p1 from '../../src/website product/P80 red.jpeg';
 import c1 from '../../src/website product/C 80.png';
+import DirectionsBikeIcon from '@mui/icons-material/DirectionsBike';
+import SpeedIcon from '@mui/icons-material/Speed';
+import LocalShippingIcon from '@mui/icons-material/LocalShipping';
+
 
 const VehicleComponent = () => {
   const [selectedSeries, setSelectedSeries] = useState('ACTIVE');
@@ -220,7 +224,12 @@ const VehicleComponent = () => {
               
             }}
           >
+             {/* Display corresponding icon based on series */}
+             {series === 'ACTIVE' && <DirectionsBikeIcon sx={{ marginRight: '8px' }} />}
+            {series === 'SPEED' && <SpeedIcon sx={{ marginRight: '8px' }} />}
+            {series === 'CARGO' && <LocalShippingIcon sx={{ marginRight: '8px' }} />}
             {series} Series
+
           </Button>
         ))}
       </Box>
