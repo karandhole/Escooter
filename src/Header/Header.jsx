@@ -20,7 +20,7 @@ import RegisterIcon from '@mui/icons-material/AppRegistration';
 import VerifiedUserIcon from '@mui/icons-material/VerifiedUser';
 import StoreIcon from '@mui/icons-material/Store';
 import MenuIcon from '@mui/icons-material/Menu';
-import logo from '../assets/logo3.gif';
+import logo from '../assets/logo4.gif';
 
 const Header = () => {
   const [showBanner, setShowBanner] = useState(true);
@@ -52,7 +52,7 @@ const Header = () => {
   const NavBarLinks = ['E-Scooter', 'E-Bicycles', 'Toys', 'Brands', 'Accessories'];
 
   const drawer = (
-    <Box sx={{ width: 250 }}>
+    <Box sx={{ width: 350 }}>
       <List>
         {NavBarLinks.map((text) => (
           <ListItem button key={text}>
@@ -188,8 +188,8 @@ const Header = () => {
             src={logo}
             alt="Logo"
             style={{
-              height: '80px',
-              width: '250px',
+              height: '60px',
+              width: '300px',
             }}
           />
         </Box>
