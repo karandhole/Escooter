@@ -371,7 +371,7 @@ const VehicleComponent = () => {
                 height: '30px',
                 borderRadius: '50%',
                 backgroundColor: color.toLowerCase(),
-                border: selectedColor === color ? '2px solid green' : 'none',
+                // border: selectedColor === color ? '2px solid green' : 'none',
               }}
             />
           </Box>
