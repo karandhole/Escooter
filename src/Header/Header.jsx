@@ -49,7 +49,7 @@ const Header = () => {
     setMobileOpen(!mobileOpen); // Toggle mobile menu
   };
 
-  const NavBarLinks = ['E-Scooter', 'E-Bicycles', 'Toys', 'Brands', 'Accessories'];
+  const NavBarLinks = ['E-Scooter', 'E-Bicycles',  'Rental','Toys', 'Accessories'];
 
   const drawer = (
     <Box sx={{ width: 250 }}> {/* Reduced width for mobile drawer */}
