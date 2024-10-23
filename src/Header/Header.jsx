@@ -10,7 +10,7 @@ import {
   Drawer,
   List,
   ListItem,
-  ListItemText
+  ListItemText,
 } from '@mui/material';
 import CloseIcon from '@mui/icons-material/Close';
 import SearchIcon from '@mui/icons-material/Search';
@@ -28,7 +28,7 @@ const Header = () => {
   const [mobileOpen, setMobileOpen] = useState(false); // Mobile menu state
 
   const placeholders = ["Search for 'E-Scooter'", "Search for 'Bicycles'", "Search for 'Accessories'"];
-  
+
   // Function to cycle through placeholders
   useEffect(() => {
     const interval = setInterval(() => {
@@ -43,7 +43,7 @@ const Header = () => {
 
   const handleCloseBanner = () => {
     setShowBanner(false);
-  }; 
+  };
 
   const toggleMobileMenu = () => {
     setMobileOpen(!mobileOpen); // Toggle mobile menu
@@ -52,7 +52,7 @@ const Header = () => {
   const NavBarLinks = ['E-Scooter', 'E-Bicycles', 'Toys', 'Brands', 'Accessories'];
 
   const drawer = (
-    <Box sx={{ width: 350 }}>
+    <Box sx={{ width: 250 }}> {/* Reduced width for mobile drawer */}
       <List>
         {NavBarLinks.map((text) => (
           <ListItem button key={text}>
@@ -86,131 +86,41 @@ const Header = () => {
         </Box>
       )}
 
-      {/* Second Layer: Search Bar and Icons */}
-      {/* <Toolbar sx={{ display: 'flex', justifyContent: 'space-between', borderBottom: '1px solid #eee', padding: '2px 0' }}>
-       
-        <Box sx={{ display: 'flex', alignItems: 'center',  marginLeft: { xs: '20px', sm: '50px', md: '280px' }, width: { xs: '90%', sm: '70%', md: '40%' } }}>
-          <InputBase
-            placeholder={searchPlaceholder}
-            startAdornment={<SearchIcon />}
-            sx={{
-              backgroundColor: '#f1f1f1',
-              padding: '5px 15px',
-              borderRadius: '25px',
-              width: '100%',
-              marginLeft: '10px',
-              '&:hover': {
-                backgroundColor: '#e0e0e0',
-              },
-            }}
-          />
-        </Box>
-
-       
-        <Box sx={{ display: { xs: 'none', md: 'flex' }, alignItems: 'center', gap: '20px' }}>
-          <Button
-            startIcon={<VideoCallIcon />}
-            sx={{
-              fontSize: '10px',
-              color: 'black',
-              '&:hover': {
-                color: 'green',
-              },
-            }}
-          >
-            Advertise
-          </Button>
-          <Button
-            startIcon={<RegisterIcon />}
-            sx={{
-              fontSize: '10px',
-              color: 'black',
-              '&:hover': {
-                color: 'green',
-              },
-            }}
-          >
-            Buy Now
-          </Button>
-          <Button
-            startIcon={<StoreIcon />}
-            sx={{
-              fontSize: '10px',
-              color: 'black',
-              '&:hover': {
-                color: 'green',
-              },
-            }}
-          >
-            Store
-          </Button>
-          <Button
-            startIcon={<VerifiedUserIcon />}
-            sx={{
-              fontSize: '10px',
-              color: 'black',
-              '&:hover': {
-                color: 'green',
-              },
-            }}
-          >
-            Warranty
-          </Button>
-          <IconButton
-            sx={{
-              fontSize: '10px',
-              color: 'black',
-              '&:hover': {
-                color: 'green',
-              },
-            }}
-          >
-            <ShoppingCartIcon />
-          </IconButton>
-        </Box>
-
-  
-        <IconButton
-          edge="start"
-          color="inherit"
-          aria-label="menu"
-          sx={{ display: { xs: 'flex', md: 'none' }, color: 'black' }}
-          onClick={toggleMobileMenu}
-        >
-          <MenuIcon />
-        </IconButton>
-      </Toolbar> */}
-
-      {/* Third Line: Logo and Nav Links */}
+      {/* Logo and Search Bar */}
       <Toolbar sx={{ display: 'flex', justifyContent: 'space-between', padding: '2px 0' }}>
-      <Box>
-  <img
-    src={logo}
-    alt="Logo"
-    style={{
-      height: 'auto', // Let the height adjust automatically to maintain aspect ratio
-      width: '100%', // Default to full width for responsiveness
-      maxWidth: '300px', // Set a max width for larger screens
-    }}
-  />
-</Box>
-<Box sx={{ display: 'flex', alignItems: 'center',  marginLeft: { xs: '0px', sm: '0px', md: '80px' }, width: { xs: '50%', sm: '40%', md: '20%' } }}>
+        <Box>
+          <img
+            src={logo}
+            alt="Logo"
+            style={{
+              height: 'auto', // Maintain aspect ratio
+              width: '100%', // Full width for responsiveness
+              maxWidth: '300px', // Set max width for larger screens
+            }}
+          />
+        </Box>
+        <Box
+          sx={{
+            display: 'flex',
+            alignItems: 'center',
+            width: { xs: '40%', sm: '50%', md: '40%', lg: '20%' }, // Adjust width based on screen size
+            marginLeft: { xs: '0', sm: '0', md: '80px' },
+          }}
+        >
           <InputBase
             placeholder={searchPlaceholder}
             startAdornment={<SearchIcon />}
             sx={{
               backgroundColor: '#f1f1f1',
-              padding: '5px 15px',
+              padding: '5px 10px', // Adjust padding for smaller size
               borderRadius: '25px',
-              width: '100%',
-              marginLeft: '10px',
+              width: '100%', // Full width
               '&:hover': {
                 backgroundColor: '#e0e0e0',
               },
             }}
           />
         </Box>
-
 
         {/* Navigation Links with Hover Effect */}
         <Box sx={{ display: { xs: 'none', md: 'flex' }, gap: '18px' }}>
@@ -243,11 +153,30 @@ const Header = () => {
             </Button>
           ))}
         </Box>
+
+        {/* Mobile Menu Icon */}
+        <IconButton
+          edge="start"
+          color="inherit"
+          aria-label="menu"
+          sx={{ display: { xs: 'flex', md: 'none' }, color: 'black' }}
+          onClick={toggleMobileMenu}
+        >
+          <MenuIcon />
+        </IconButton>
       </Toolbar>
 
       {/* Drawer for Mobile Menu */}
       <Drawer anchor="left" open={mobileOpen} onClose={toggleMobileMenu}>
-        {drawer}
+        <Box sx={{ width: 250 }}> {/* Adjust width for mobile drawer */}
+          <List>
+            {NavBarLinks.map((text) => (
+              <ListItem button key={text} sx={{ padding: '10px' }}>
+                <ListItemText primary={text} />
+              </ListItem>
+            ))}
+          </List>
+        </Box>
       </Drawer>
     </AppBar>
   );
