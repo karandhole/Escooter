@@ -13,7 +13,7 @@ const IconBar = () => {
         display: 'flex',
         justifyContent: 'space-between', // Space between icons and "Special Offer"
         alignItems: 'center',
-        backgroundColor: '#504e4d ',
+        backgroundColor: '#494746 ',
         px: 2,
         boxShadow: '0 4px 10px rgba(0, 0, 0, 0.1)',
         '@media (max-width: 600px)': {
