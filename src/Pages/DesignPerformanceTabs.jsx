@@ -154,7 +154,7 @@ const DesignPerformanceTabs = () => {
               fontSize: { xs: '1rem', sm: '1.5rem', md: '2.5rem' }, 
               textTransform: 'none',
               fontWeight: '600',
-              color: '#706e68',
+              color: '#595555',
             },
             '& .Mui-selected': {
               color: '#030202',

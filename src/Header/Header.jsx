@@ -183,16 +183,18 @@ const Header = () => {
 
       {/* Third Line: Logo and Nav Links */}
       <Toolbar sx={{ display: 'flex', justifyContent: 'space-between', padding: '2px 0' }}>
-        <Box>
-          <img
-            src={logo}
-            alt="Logo"
-            style={{
-              height: '65px',
-              width: '280px',
-            }}
-          />
-        </Box>
+      <Box>
+  <img
+    src={logo}
+    alt="Logo"
+    style={{
+      height: 'auto', // Let the height adjust automatically to maintain aspect ratio
+      width: '100%', // Default to full width for responsiveness
+      maxWidth: '280px', // Set a max width for larger screens
+    }}
+  />
+</Box>
+
 
         {/* Navigation Links with Hover Effect */}
         <Box sx={{ display: { xs: 'none', md: 'flex' }, gap: '18px' }}>
