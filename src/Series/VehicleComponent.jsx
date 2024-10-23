@@ -4,10 +4,12 @@ import battery from '../../src/ProductImages/battery.png';
 import charger from '../../src/ProductImages/charger.png';
 import motor from '../../src/ProductImages/motor.png';
 import speed from '../../src/ProductImages/speed.png';
-import v1 from '../../src/website product/V80RED.png';
+import v1 from '../../src/website product/V80 red.png'
 import v2 from '../../src/website product/V80WHITE.png';
+import v3 from  '../../src/website product/V150 white.png'
 import g1 from '../../src/website product/G80silver.png';
 import g2 from '../../src/website product/G80white.png';
+import g3 from '../../src/website product/G150 silver.png'
 import z1 from '../../src/website product/Z80RED.png';
 import z2 from '../../src/website product/Z80WHITE.JPG';
 import d1 from '../../src/website product/D80 red.png';
@@ -136,18 +138,20 @@ const VehicleComponent = () => {
   };
 
   const priceData = {
-    V80: 'MRP ₹45,999* /-',
-    G80: 'MRP ₹44,999* /-',
-    Z80: 'MRP ₹44,999* /-',
-    D80: 'MRP ₹47,999* /-',
-    Y80: 'MRP ₹54,999* /-',
-    P80: 'MRP ₹59,999* /-',
-    V150: 'MRP ₹65,999* /-',
-    G150: 'MRP ₹69,999* /-',
-    C80_CARGO: 'MRP ₹55,999* /-',
-    METAL_CARGO_2W: 'MRP ₹58,999* /-',
-    METAL_CARGO_3W: 'MRP ₹69,999* /-',
-  };
+   
+      V80: { Graphene: 'MRP ₹57,999* /-', Lithium: 'MRP ₹72,999* /-' },
+      G80: { Graphene: 'MRP ₹56,999* /-', Lithium: 'MRP ₹71,999* /-' },
+      Z80: { Graphene: 'MRP ₹49,999* /-', Lithium: 'MRP ₹69,999* /-' },
+      D80: { Graphene: 'MRP ₹51,999* /-', Lithium: 'MRP ₹71,999* /-' },
+      Y80: { Graphene: 'MRP ₹56,999* /-', Lithium: 'MRP ₹76,999* /-' },
+      P80: { Graphene: 'MRP ₹62,999* /-', Lithium: 'MRP ₹77,999* /-' },
+      V150: { },
+      G150: {  },
+      C80_CARGO: { Lithium: 'MRP ₹72,999* /-' },
+      METAL_CARGO_2W: { Graphene: 'MRP ₹59,999* /-', Lithium: 'MRP ₹74,999* /-' },
+      METAL_CARGO_3W: { Graphene: 'MRP ₹66,999* /-', Lithium: 'MRP ₹81,999* /-' },
+    };
+  
 
   const colorImageMap = {
     V80: {
@@ -169,12 +173,12 @@ const VehicleComponent = () => {
       Blue: d3,
     },
     V150:{
-      Red: v1,
-      White: v2,
+     
+      White: v3,
     },
     G150:{
-      Red: v1,
-      White: v2,
+      Silver: g3
+     
     },
     C80_CARGO:{
       Yellow:c1
@@ -203,6 +207,7 @@ const VehicleComponent = () => {
           display: 'flex',
           justifyContent: 'center',
           marginBottom: '20px',
+          hight:'100px',
           flexWrap: 'wrap', // Make buttons wrap on smaller screens
           gap: '10px',
         }}
@@ -213,14 +218,15 @@ const VehicleComponent = () => {
             variant="contained"
             onClick={() => handleSeriesChange(series)}
             sx={{
-              backgroundColor: selectedSeries === series ? '#00ff99' : 'lightgray',
+              backgroundColor: selectedSeries === series ? 'orange' : 'lightgray',
               color: 'black',
               padding: { xs: '10px 30px', sm: '20px 50px' }, // Responsive padding
               margin: '0 10px',
+             
               boxShadow: 3,
               borderRadius: '8px',
               fontSize: { xs: '18px', sm: '18px' }, // Responsive font size
-              fontWeight: '900',
+              fontWeight: selectedSeries === series ? '900' : '500',
               
             }}
           >
@@ -251,15 +257,15 @@ const VehicleComponent = () => {
             variant="outlined"
             onClick={() => handleSubSeriesChange(subSeries)}
             sx={{
-              backgroundColor: selectedSubSeries === subSeries ? '#00ff99' : 'white',
+              backgroundColor: selectedSubSeries === subSeries ? 'orange' : 'white',
               color: selectedSubSeries === subSeries ? 'black' : 'black',
               padding: { xs: '8px', sm: '15px' },
               width: { xs: '140px', sm: '200px' }, // Responsive width
-              height: '80px',
+              height: '50px',
               borderRadius: '8px',
               fontSize: { xs: '18px', sm: '16px' }, // Responsive font size
               border: 'none',
-              fontWeight: '800',
+              fontWeight: selectedSubSeries === subSeries ? '800' : '500',
             }}
           >
             {subSeries}
@@ -268,117 +274,128 @@ const VehicleComponent = () => {
       </Box>
 
       <hr />
+{/* Vehicle Image and Specifications */}
+<Box
+  sx={{
+    display: 'flex',
+    justifyContent: 'space-between',
+    flexDirection: { xs: 'column', lg: 'row' }, // Stack on smaller screens
+    marginTop: '80px',
+  }}
+>
 
-      {/* Vehicle Image and Specifications */}
-      <Box
-        sx={{
-          display: 'flex',
-          justifyContent: 'space-between',
-          flexDirection: { xs: 'column', lg: 'row' }, // Stack on smaller screens
-          marginTop: '80px',
-        }}
-      >
-        {/* Specifications */}
-        <Box sx={{ width: { xs: '100%', lg: '25%' }, display: 'flex', flexDirection: 'column', gap: '15px' }}>
-          {subSeriesData[selectedSubSeries] &&
-            Object.entries(subSeriesData[selectedSubSeries]).map(([key, value]) => (
-              <Box
-                key={key}
-                sx={{
-                  padding: '20px',
-                  backgroundColor: 'white',
-                  boxShadow: 3,
-                  borderRadius: '8px',
-                  height: '140px',
-                  display: 'flex',
-                  alignItems: 'center',
-                }}
-              >
-                <Box sx={{ marginRight: '15px' }}>
-                  <img src={value.img} alt={key} style={{ width: '50px', height: '50px' }} />
-                </Box>
-                <Box>
-                  <Typography variant="body1" sx={{ fontWeight: 'bold', fontSize: '21px' }}>
-                    {key.toUpperCase()}
-                  </Typography>
-                  <Typography variant="body2" sx={{ fontSize: '18px', fontStyle: 'italic' }}>
-                    {value.text}
-                  </Typography>
-                </Box>
-              </Box>
-            ))}
-        </Box>
+ 
 
-        {/* Vehicle Image */}
+   {/* Color Selection */}
+   <Box
+    sx={{
+      width: { xs: '100%', lg: '15%' },
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      gap: '10px', // Reduced gap between color selection options
+      padding: '0px',
+    }}
+  >
+    <Typography variant="h6" sx={{ fontWeight: 'bold', fontSize: '20px' }}>
+      Select Color
+    </Typography>
+    <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '10px' }}> {/* Reduced gap */}
+      {Object.keys(colorImageMap[selectedSubSeries]).map((color) => (
         <Box
+          key={color}
+          onClick={() => handleColorChange(color)}
           sx={{
-            width: { xs: '100%', lg: '40%' }, // Adjust width for smaller screens
             display: 'flex',
-            justifyContent: 'center',
+            flexDirection: 'row',
+            gap: '5px',
             alignItems: 'center',
-            marginY: { xs: '20px', lg: '0' }, // Add space on small screens
+            minWidth: '90px',
+            padding: '4px',
+            boxShadow: 'initial',
+            borderRadius: '10px',
+            cursor: 'pointer',
+            border: 'solid 1px #9b9898',
+            backgroundColor: selectedColor === color ? '#D3D3D3' : 'transparent', // Light grey when selected
+            '&:hover': {
+              backgroundColor: selectedColor === color ? '#D3D3D3' : '#f0f0f0', // Light grey when hovered if not selected
+            },
           }}
         >
-          <img
-            src={colorImageMap[selectedSubSeries]?.[selectedColor]}
-            alt={`${selectedSubSeries} - ${selectedColor}`}
-            style={{ width: '100%', maxWidth: '1200px', height: 'auto' }} // Responsive image
+          <Typography variant="body2" sx={{ fontSize: '16px', fontStyle: 'normal',fontWeight:  selectedColor === color ? 'bold' : 'regular' }}>
+            {color}
+          </Typography>
+          <Box
+            sx={{
+              width: '30px',
+              height: '30px',
+              borderRadius: '50%',
+              backgroundColor: color.toLowerCase(),
+             
+            }}
           />
         </Box>
+      ))}
+    </Box>
+  </Box>
 
-        {/* Color Selection */}
+  {/* Vehicle Image */}
+  <Box
+    sx={{
+      width: { xs: '100%', lg: '50%' }, // Adjusted width to 50% for the vehicle image
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+      marginY: { xs: '20px', lg: '0' }, // Add space on small screens
+    }}
+  >
+    <img
+      src={colorImageMap[selectedSubSeries]?.[selectedColor]}
+      alt={`${selectedSubSeries} - ${selectedColor}`}
+      style={{ width: '100%', maxWidth: '1300px', height: 'auto' }} // Adjusted for a smaller responsive image
+    />
+  </Box>
+
+  {/* Specifications */}
+  <Box
+    sx={{
+      width: { xs: '100%', lg: '20%' }, // Reduced width for the specification box
+      display: 'flex',
+      flexDirection: 'column',
+      gap: '10px', // Reduced gap between specification boxes
+    }}
+  >
+    {subSeriesData[selectedSubSeries] &&
+      Object.entries(subSeriesData[selectedSubSeries]).map(([key, value]) => (
         <Box
+          key={key}
           sx={{
-            width: { xs: '100%', lg: '15%' },
+            padding: '15px', // Reduced padding for a more compact layout
+            backgroundColor: 'white',
+            boxShadow: 3,
+            borderRadius: '8px',
+            height: '120px', // Reduced height for a more compact layout
             display: 'flex',
-            flexDirection: 'column',
             alignItems: 'center',
-            gap: '10px',
-            padding: '0px',
           }}
         >
-          <Typography variant="h6" sx={{ fontWeight: 'bold', fontSize: '22px' }}>
-        Select Color
-      </Typography>
-      <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '15px' }}>
-        {Object.keys(colorImageMap[selectedSubSeries]).map((color) => (
-          <Box
-            key={color}
-            onClick={() => handleColorChange(color)}
-            sx={{
-              display: 'flex',
-              flexDirection: 'row',
-              gap: '5px',
-              alignItems: 'center',
-              minWidth: '90px',
-              padding: '4px',
-              boxShadow: 'initial',
-              borderRadius: '10px',
-              cursor: 'pointer',
-              border: 'solid 1px #9b9898',
-              backgroundColor: selectedColor === color ? '#D3D3D3' : 'transparent', // Light grey when selected
-              '&:hover': {
-                backgroundColor: selectedColor === color ? '#D3D3D3' : '#f0f0f0', // Light grey when hovered if not selected
-              },
-            }}
-          >
-            <Typography variant="body2" sx={{ fontSize: '16px', fontStyle: 'normal' }}>
-              {color}
-            </Typography>
-            <Box
-              sx={{
-                width: '30px',
-                height: '30px',
-                borderRadius: '50%',
-                backgroundColor: color.toLowerCase(),
-                // border: selectedColor === color ? '2px solid green' : 'none',
-              }}
-            />
+          <Box sx={{ marginRight: '10px' }}>
+            <img src={value.img} alt={key} style={{ width: '40px', height: '40px' }} /> {/* Smaller icons */}
           </Box>
-        ))}
-      </Box>
+          <Box>
+            <Typography variant="body1" sx={{ fontWeight: 'bold', fontSize: '18px' }}> {/* Slightly reduced font size */}
+              {key.toUpperCase()}
+            </Typography>
+            <Typography variant="body2" sx={{ fontSize: '16px', fontStyle: 'italic' }}> {/* Reduced font size */}
+              {value.text}
+            </Typography>
+          </Box>
         </Box>
-      </Box>
+      ))}
+  </Box>
+
+</Box>
+
 
      {/* Battery Selection and Price/Buy Now Button */}
 <Box
@@ -388,7 +405,7 @@ const VehicleComponent = () => {
     justifyContent: { xs: 'center', sm: 'space-between' }, // Center on small screens, space between on large
     alignItems: { xs: 'center', sm: 'flex-start' }, // Align items at the start on larger screens
     marginTop: '40px',
-    gap: { xs: '20px', sm: '0' }, // Adds gap on small screens
+    gap: { xs: '10px', sm: '0' }, // Adds gap on small screens
   }}
 >
   {/* Battery Selection */}
@@ -405,7 +422,7 @@ const VehicleComponent = () => {
     <Box
       sx={{
         padding: '15px',
-        backgroundColor: selectedBattery === 'Lead Acid' ? 'black' : 'grey',
+        backgroundColor: selectedBattery === 'Graphene Ion' ? 'orange' : 'grey',
         boxShadow: 3,
         borderRadius: '8px',
         height: '60px',
@@ -414,18 +431,18 @@ const VehicleComponent = () => {
         justifyContent: 'center',
         cursor: 'pointer',
         width: { xs: '100%', sm: '47%' }, // Full width on small screens
-        color: '#00e68a',
+        color: 'black',
         fontSize: '18px',
         fontWeight: 'bold',
       }}
-      onClick={() => setSelectedBattery('Lead Acid')}
+      onClick={() => setSelectedBattery('Graphene Ion')}
     >
       GRAPHENE ION
     </Box>
     <Box
       sx={{
         padding: '15px',
-        backgroundColor: selectedBattery === 'Lithium Ion' ? 'black' : 'grey',
+        backgroundColor: selectedBattery === 'Lithium Ion' ? 'orange' : 'grey',
         boxShadow: 3,
         borderRadius: '8px',
         height: '60px',
@@ -434,7 +451,7 @@ const VehicleComponent = () => {
         justifyContent: 'center',
         cursor: 'pointer',
         width: { xs: '100%', sm: '47%' }, // Full width on small screens
-        color: '#00e68a',
+        color: 'white',
         fontSize: '18px',
         fontWeight: 'bold',
       }}
@@ -444,39 +461,45 @@ const VehicleComponent = () => {
     </Box>
   </Box>
 
-  {/* Price and Buy Now */}
   <Box
+  sx={{
+    backgroundColor: 'white', // Set background color to gray
+    padding: '16px', // Add some padding for aesthetics
+    borderRadius: '8px', // Optional: Add rounded corners
+    display: 'flex', // Use flexbox to align items in a row
+    alignItems: 'center', // Center items vertically
+    justifyContent: 'space-between',
+    gap:'20px' // Space between price and button
+  }}
+>
+  <Typography
+    variant="h6"
     sx={{
-      width: { xs: '100%', sm: '25%' }, // Full width on small screens, 25% on larger
-      textAlign: 'center',
-      display: 'flex',
-      flexDirection: 'column', // Stack price and button vertically
-      alignItems: 'center',
+      fontWeight: 'bold',
+      fontSize: { xs: '24px', sm: '28px' }, // Larger font on small screens
     }}
   >
-    <Typography
-      variant="h6"
-      sx={{
-        fontWeight: 'bold',
-        fontSize: { xs: '22px', sm: '28px' }, // Smaller font on small screens
-      }}
-    >
-      {priceData[selectedSubSeries]}
-    </Typography>
-    <Button
-      variant="contained"
-      sx={{
-        backgroundColor: 'orange',
-        color: 'white',
-        padding: { xs: '12px 20px', sm: '15px 22px' }, // Adjust padding for responsiveness
-        marginTop: '10px',
-        fontWeight: 'bold',
-        fontSize: { xs: '20px', sm: '25px' }, // Adjust font size for smaller screens
-      }}
-    >
-      Buy Now
-    </Button>
-  </Box>
+    {selectedBattery === 'Graphene Ion' ? priceData[selectedSubSeries].Graphene : priceData[selectedSubSeries].Lithium} 
+  </Typography>
+  <Button
+    variant="contained"
+    sx={{
+      backgroundColor: 'orange',
+      color: 'white',
+      borderRadius: '8px',
+      height: '50px',
+      minWidth: '200px', // Adjust width for smaller screens
+      padding: { xs: '12px 20px', sm: '15px 22px' }, // Adjust padding for responsiveness
+      fontWeight: 'bold',
+      fontSize: { xs: '20px', sm: '25px' }, // Adjust font size for smaller screens
+    }}
+  >
+    Buy Now
+  </Button>
+</Box>
+
+
+
 </Box>
 
 

@@ -84,7 +84,8 @@ const ContactNote = () => {
             height: { xs: '120px', sm: '150px', md: '180px' },
             width: 'auto',
             position: 'absolute',
-            right: '190px',
+            right: { xs: '0px', sm: '200px', md: '150px' },
+            left: { xs: '190px', sm: '0px', md: '0px' },
             top: '-30px',
             zIndex: 2,
           }}

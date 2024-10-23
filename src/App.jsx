@@ -10,7 +10,7 @@ import ContactNote from './ContactNote/ContactNote'
 import Slider from './Slider/Slider'
 import DesignPerformanceTabs from './Pages/DesignPerformanceTabs'
 import FAQ from './Pages/Faq'
-import Banner from './Baner/Baner'
+
 
 import VedioSection from './VedioSection/VedioSection'
 import ImageCarousel from './ImageSection/ImageCarousel'
@@ -32,7 +32,7 @@ function App() {
       <DesignPerformanceTabs/>
       <FAQ/>
       <ContactNote/>
-      <Banner/>
+     
      <VedioSection/>
      <ImageCarousel/>
       <Footer/>

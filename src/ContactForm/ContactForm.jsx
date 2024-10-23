@@ -1,7 +1,7 @@
 import React from 'react';
 import { Grid, TextField, Button, Box, Typography } from '@mui/material';
 import download from '../ProductImages/download.png'
-import D80 from '../assets/exer-img2.png'
+import D80 from '../website product/P80 red.jpeg'
 const ContactForm = () => {
 
   // Function to trigger PDF download
@@ -29,7 +29,7 @@ const ContactForm = () => {
             src={D80} // Replace with actual image URL
             alt="E-Scooter"
             className="form-image"
-            style={{ width: '70%',height:'90vh', borderRadius: '10px',
+            style={{ width: '80%', borderRadius: '10px',
              }} // Styling for responsiveness
           />
         </Grid>
