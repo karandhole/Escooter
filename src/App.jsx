@@ -1,5 +1,6 @@
 import { useState } from 'react'
-
+import { ThemeProvider } from '@mui/material/styles';
+import theme from './theme';
 import './App.css'
 import Header from './Header/Header'
 import VehicleComponent from './Series/VehicleComponent'
@@ -22,6 +23,7 @@ function App() {
 
   return (
     <>
+   <ThemeProvider theme={theme}>
       <Header/>
       <IconBar/>
       <Slider/>
@@ -34,6 +36,7 @@ function App() {
      <VedioSection/>
      <ImageCarousel/>
       <Footer/>
+      </ThemeProvider>
     </>
   )
 }
