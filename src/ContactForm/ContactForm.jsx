@@ -29,7 +29,7 @@ const ContactForm = () => {
             src={D80} // Replace with actual image URL
             alt="E-Scooter"
             className="form-image"
-            style={{ width: '80%',height:'90vh', borderRadius: '10px',
+            style={{ width: '70%',height:'90vh', borderRadius: '10px',
              }} // Styling for responsiveness
           />
         </Grid>
