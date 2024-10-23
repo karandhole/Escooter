@@ -1,36 +1,24 @@
 import React, { useRef, useEffect } from 'react';
-import { Box, Grid, IconButton } from '@mui/material';
+import { Box, Grid, IconButton, Typography } from '@mui/material';
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
-import exer2 from '../Vediophotos/exer2.jpeg';
+
 import exer3 from '../Vediophotos/exer3.jpeg';
 import exer4 from '../Vediophotos/exer4.jpeg';
 import exer5 from '../Vediophotos/exer5.jpeg';
 import exer6 from '../Vediophotos/exer6.jpeg';
-import exer7 from '../Vediophotos/exer7.jpeg';
-import exer8 from '../Vediophotos/exer8.jpeg';
-import exer9 from '../Vediophotos/exer9.jpeg';
-import exer10 from '../Vediophotos/exer10.jpeg';
-import exer11 from '../Vediophotos/exer11.jpeg';
-import exer12 from '../Vediophotos/exer12.jpeg';
 import exer13 from '../Vediophotos/exer13.jpeg';
 import exer14 from '../Vediophotos/exer14.jpeg';
+import exer15 from '../Vediophotos/exer15.jpeg';
 
-// Sample images (Replace these with your actual image URLs)
 const images = [
-  exer2,
   exer3,
   exer4,
   exer5,
   exer6,
-  exer7,
-  exer8,
-  exer9,
-  exer10,
-  exer11,
-  exer12,
   exer13,
   exer14,
+  exer15,
 ];
 
 const ImageCarousel = () => {
@@ -62,7 +50,12 @@ const ImageCarousel = () => {
   }, []);
 
   return (
-    <Box sx={{ position: 'relative', width: '100%', overflow: 'hidden', padding: 2 }}>
+    <Box sx={{ position: 'relative', width: '100%', height: { xs: '60vh', sm: '55vh', md: '65vh' }, overflow: 'hidden', padding: 2 }}>
+      {/* Title */}
+      <Typography sx={{ textAlign: 'center', paddingTop: '10px', paddingBottom: '10px', fontSize: { xs: '20px', md: '24px' } }}>
+        <h3>Our Campaigns</h3>
+      </Typography>
+
       {/* Left Scroll Button */}
       <IconButton
         onClick={scrollLeft}
@@ -93,14 +86,24 @@ const ImageCarousel = () => {
       >
         <Grid container spacing={2} sx={{ flexWrap: 'nowrap' }}>
           {images.map((image, index) => (
-            <Grid item key={index} sx={{ minWidth: '33.33%' }}>
+            <Grid
+              item
+              key={index}
+              sx={{
+                minWidth: { xs: '90%', sm: '50%', md: '25%' }, // Responsive widths
+                transition: 'transform 0.3s ease-in-out',
+                '&:hover': {
+                  transform: 'scale(1.05)',
+                },
+              }}
+            >
               <Box
                 component="img"
                 src={image}
                 alt={`Image ${index}`}
                 sx={{
                   width: '100%',
-                  height: 'auto',
+                  height: { xs: '45vh', sm: '40vh', md: '50vh' }, // Responsive heights
                   objectFit: 'cover',
                   borderRadius: '8px',
                 }}

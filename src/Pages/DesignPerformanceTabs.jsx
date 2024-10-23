@@ -94,7 +94,7 @@ const ImageCard = ({ title, subtitle, imageUrl }) => (
           objectFit: 'cover',
           transition: 'transform 0.3s ease',
           '&:hover': {
-            transform: 'scale(1.5)',
+            transform: 'scale(1.1)',
           },
         }}
       />
@@ -154,7 +154,7 @@ const DesignPerformanceTabs = () => {
               fontSize: { xs: '1rem', sm: '1.5rem', md: '2.5rem' }, 
               textTransform: 'none',
               fontWeight: '600',
-              color: '#595555',
+              color: 'gray',
             },
             '& .Mui-selected': {
               color: '#030202',

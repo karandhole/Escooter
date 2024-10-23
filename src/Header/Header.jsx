@@ -87,9 +87,9 @@ const Header = () => {
       )}
 
       {/* Second Layer: Search Bar and Icons */}
-      <Toolbar sx={{ display: 'flex', justifyContent: 'space-between', borderBottom: '1px solid #eee', padding: '2px 0' }}>
-        {/* Search Bar */}
-        <Box sx={{ display: 'flex', alignItems: 'flex-end',  marginLeft: { xs: '20px', sm: '50px', md: '280px' }, width: { xs: '90%', sm: '70%', md: '40%' } }}>
+      {/* <Toolbar sx={{ display: 'flex', justifyContent: 'space-between', borderBottom: '1px solid #eee', padding: '2px 0' }}>
+       
+        <Box sx={{ display: 'flex', alignItems: 'center',  marginLeft: { xs: '20px', sm: '50px', md: '280px' }, width: { xs: '90%', sm: '70%', md: '40%' } }}>
           <InputBase
             placeholder={searchPlaceholder}
             startAdornment={<SearchIcon />}
@@ -106,7 +106,7 @@ const Header = () => {
           />
         </Box>
 
-        {/* Icons with Hover Effect moved here */}
+       
         <Box sx={{ display: { xs: 'none', md: 'flex' }, alignItems: 'center', gap: '20px' }}>
           <Button
             startIcon={<VideoCallIcon />}
@@ -169,7 +169,7 @@ const Header = () => {
           </IconButton>
         </Box>
 
-        {/* Mobile Menu Icon */}
+  
         <IconButton
           edge="start"
           color="inherit"
@@ -179,7 +179,7 @@ const Header = () => {
         >
           <MenuIcon />
         </IconButton>
-      </Toolbar>
+      </Toolbar> */}
 
       {/* Third Line: Logo and Nav Links */}
       <Toolbar sx={{ display: 'flex', justifyContent: 'space-between', padding: '2px 0' }}>
@@ -190,10 +190,26 @@ const Header = () => {
     style={{
       height: 'auto', // Let the height adjust automatically to maintain aspect ratio
       width: '100%', // Default to full width for responsiveness
-      maxWidth: '280px', // Set a max width for larger screens
+      maxWidth: '300px', // Set a max width for larger screens
     }}
   />
 </Box>
+<Box sx={{ display: 'flex', alignItems: 'center',  marginLeft: { xs: '0px', sm: '0px', md: '80px' }, width: { xs: '50%', sm: '40%', md: '20%' } }}>
+          <InputBase
+            placeholder={searchPlaceholder}
+            startAdornment={<SearchIcon />}
+            sx={{
+              backgroundColor: '#f1f1f1',
+              padding: '5px 15px',
+              borderRadius: '25px',
+              width: '100%',
+              marginLeft: '10px',
+              '&:hover': {
+                backgroundColor: '#e0e0e0',
+              },
+            }}
+          />
+        </Box>
 
 
         {/* Navigation Links with Hover Effect */}
