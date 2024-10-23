@@ -20,7 +20,7 @@ import RegisterIcon from '@mui/icons-material/AppRegistration';
 import VerifiedUserIcon from '@mui/icons-material/VerifiedUser';
 import StoreIcon from '@mui/icons-material/Store';
 import MenuIcon from '@mui/icons-material/Menu';
-import logo from '../assets/logo4.gif';
+import logo from '../assets/logo.gif';
 
 const Header = () => {
   const [showBanner, setShowBanner] = useState(true);
@@ -89,7 +89,7 @@ const Header = () => {
       {/* Second Layer: Search Bar and Icons */}
       <Toolbar sx={{ display: 'flex', justifyContent: 'space-between', borderBottom: '1px solid #eee', padding: '2px 0' }}>
         {/* Search Bar */}
-        <Box sx={{ display: 'flex', alignItems: 'center', paddingLeft:'140px', width: { xs: '50%', md: '40%' } }}>
+        <Box sx={{ display: 'flex', alignItems: 'flex-end',  marginLeft: { xs: '20px', sm: '50px', md: '280px' }, width: { xs: '90%', sm: '70%', md: '40%' } }}>
           <InputBase
             placeholder={searchPlaceholder}
             startAdornment={<SearchIcon />}
@@ -189,7 +189,7 @@ const Header = () => {
             alt="Logo"
             style={{
               height: '60px',
-              width: '300px',
+              width: '350px',
             }}
           />
         </Box>

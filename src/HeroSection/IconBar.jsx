@@ -198,7 +198,7 @@ const IconBar = () => {
           },
         }}
       >
-        <IconButton
+        {/* <IconButton
           aria-label="Offer"
           sx={{
             color: 'white',
@@ -224,7 +224,7 @@ const IconBar = () => {
           >
             Special Offer
           </Typography>
-        </IconButton>
+        </IconButton> */}
       </Box>
     </Box>
   );
