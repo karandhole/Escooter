@@ -159,7 +159,7 @@ const Header = () => {
           edge="start"
           color="inherit"
           aria-label="menu"
-          sx={{ display: { xs: 'flex', md: 'none' }, color: 'black' }}
+          sx={{ display: { xs: 'flex', md: 'none' }, color: 'black' ,gap: { xs: '4px', md: '0px' } }}
           onClick={toggleMobileMenu}
         >
           <MenuIcon />

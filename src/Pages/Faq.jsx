@@ -65,7 +65,7 @@ const FAQ = () => {
                 aria-controls={`panel${index}-content`}
                 id={`panel${index}-header`}
               >
-                <Typography sx={{ fontSize: isMobile ? '1.5rem' : isTablet ? '1.5rem' : '1.7rem' }}>
+                <Typography sx={{ fontSize: isMobile ? '1.5rem' : isTablet ? '1.5rem' : '1.4rem', fontWeight:'600' }}>
                   {faq.question}
                 </Typography>
               </AccordionSummary>

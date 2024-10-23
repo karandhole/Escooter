@@ -2,22 +2,22 @@ import React, { useState } from 'react';
 import { Box, Tabs, Tab, Grid, Card, CardMedia, CardContent, Typography } from '@mui/material';
 import Zoom from 'react-medium-image-zoom';
 import 'react-medium-image-zoom/dist/styles.css'; 
-import images1 from '../assets/images1-removebg-preview.png';
-import images2 from '../assets/images2__2_-removebg-preview.png';
-import images3 from '../assets/images3__2_-removebg-preview.png';
-import images4 from '../assets/images4-removebg-preview.png';
-import images6 from '../assets/images6 (1).png';
-import images7 from '../assets/images7 (1).png';
-import images8 from '../assets/images8 (1).png';
-import images9 from '../assets/images9 (1).png';
-import img11 from '../assets/img11-removebg-preview.png';
-import img12 from '../assets/img12-removebg-preview.png';
-import img13 from '../assets/img13-removebg-preview.png';
+import images1 from '../assets/images1.jpg';
+import images2 from '../assets/images2.jpg';
+import images3 from '../assets/images3.jpg';
+import images4 from '../assets/images4.jpg';
+import images6 from '../assets/images6.jpg';
+import images7 from '../assets/images7.jpg';
+import images8 from '../assets/images8.jpg';
+import images9 from '../assets/images9.jpg';
+import img11 from '../assets/img11.jpg';
+import img12 from '../assets/img12.jpg';
+import img13 from '../assets/img13.jpg';
 
 const images = {
   design: [
     {
-      title: "HYPERBLADE LED TAIL LIGHT",
+      title: "HBL TAIL LIGHT",
       subtitle: "BUILT FOR DURABILITY & FUNCTIONALITY",
       imageUrl: images1, 
     },
@@ -32,7 +32,7 @@ const images = {
       imageUrl: images3,
     },
     {
-      title: "TURBOGRIP ALLOY WHEEL",
+      title: "TURBOGRIP WHEEL",
       subtitle: "STABLE RIDE ON ANY TERRAIN",
       imageUrl: images4,
     },
@@ -44,18 +44,18 @@ const images = {
       imageUrl: images6,
     },
     {
-      title: "NO LICENSE & REGISTRATION",
-      subtitle: "LOW SPEED SAFETY ASSURED FREE SHIPPING",
+      title: "NO LICENSE REQ ",
+      subtitle: "LOW SPEED SAFE + FREE SHIP",
       imageUrl: images7,
     },
     {
       title: "CHARGING",
-      subtitle: "EFFICIENT AUTO-CUT CHARGER WITH FAST CHARGING",
+      subtitle: "AUTO-CUT FAST CHARGER ",
       imageUrl: images8,
     },
     {
       title: "BATTERY",
-      subtitle: "HIGH-CAPACITY LI-ON & LEAD ACID OPTIONS",
+      subtitle: "HIGH-CAP BATTERY OPTONS",
       imageUrl: images9,
     },
   ],
@@ -68,7 +68,7 @@ const features = [
   },
   {
     img: img12,
-    title: 'No License & No Registration',
+    title: 'No License Reqirement',
   },
   {
     img: img13,
@@ -83,6 +83,7 @@ const ImageCard = ({ title, subtitle, imageUrl }) => (
     cursor: 'pointer', 
     borderRadius: '15px',
     boxShadow: 'none', 
+    position: 'relative',
   }}>
     <Zoom>
       <CardMedia
@@ -99,19 +100,28 @@ const ImageCard = ({ title, subtitle, imageUrl }) => (
         }}
       />
     </Zoom>
-    <CardContent>
+    <CardContent
+    sx={{
+        position: 'absolute', // Positioning to overlay on the image
+        bottom: 0, // Align to bottom
+        left: 0,
+        right: 0,
+        
+        padding: '10px', // Add padding around text
+      }}
+    >
       <Typography 
         gutterBottom 
         variant="h6" 
         component="div" 
-        sx={{ fontWeight: '700' }} // Increased font weight for the title
+        sx={{ fontWeight: '700', textAlign: 'center',color: '#fff',fontSize:'24px'  }} // Increased font weight for the title
       >
         {title}
       </Typography>
       <Typography 
         variant="body2" 
         color="text.secondary" 
-        sx={{ fontWeight: '500' }} // Increased font weight for the subtitle
+        sx={{ fontWeight: '500', textAlign: 'center',color:'#fff',fontSize:'16' }} // Increased font weight for the subtitle
       >
         {subtitle}
       </Typography>
@@ -143,18 +153,21 @@ const DesignPerformanceTabs = () => {
         backgroundColor: 'aliceblue', 
         padding: { xs: '8px', sm: '16px', md: '24px' }, 
         marginBottom: '30px',
+        
       }}>
         <Tabs 
           value={tabValue} 
           onChange={handleTabChange} 
           centered 
+          textColor="inherit" // This will inherit the color from the sx styles
+          indicatorColor="secondary"
           TabIndicatorProps={{ style: { backgroundColor: 'green' } }}
           sx={{ 
             '& .MuiTab-root': {
               fontSize: { xs: '1rem', sm: '1.5rem', md: '2.5rem' }, 
               textTransform: 'none',
               fontWeight: '600',
-              color: 'gray',
+              color: '#595555',
             },
             '& .Mui-selected': {
               color: '#030202',
