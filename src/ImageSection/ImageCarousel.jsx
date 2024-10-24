@@ -13,11 +13,13 @@ import exer15 from '../Vediophotos/exer15.jpeg';
 
 const images = [
   exer3,
-  exer4,
+
   exer5,
   exer6,
-  exer13,
   exer14,
+  exer13,
+  
+  exer4,
   exer15,
 ];
 
@@ -41,13 +43,13 @@ const ImageCarousel = () => {
   };
 
   // Auto-scroll functionality
-  useEffect(() => {
-    const interval = setInterval(() => {
-      scrollRight();
-    }, 3000); // Adjust the timing (3000ms = 3 seconds)
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     scrollRight();
+  //   }, 3000); // Adjust the timing (3000ms = 3 seconds)
 
-    return () => clearInterval(interval); // Cleanup the interval on component unmount
-  }, []);
+  //   return () => clearInterval(interval); // Cleanup the interval on component unmount
+  // }, []);
 
   return (
     <Box sx={{ position: 'relative', width: '100%', height: { xs: '60vh', sm: '55vh', md: '65vh' }, overflow: 'hidden', padding: 2 }}>
