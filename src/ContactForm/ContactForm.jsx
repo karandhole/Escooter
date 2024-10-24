@@ -1,7 +1,7 @@
 import React from 'react';
 import { Grid, TextField, Button, Box, Typography } from '@mui/material';
 import download from '../ProductImages/download.png'
-import D80 from '../website product/P80 red.jpeg'
+import D80 from '../website product/image-contact.png'
 const ContactForm = () => {
 
   // Function to trigger PDF download

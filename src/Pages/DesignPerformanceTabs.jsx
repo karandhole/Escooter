@@ -18,7 +18,7 @@ const images = {
   design: [
     {
       title: "HBL TAIL LIGHT",
-      subtitle: "BUILT FOR DURABILITY & FUNCTIONALITY",
+      subtitle: "BUILD DURABLE & FUNCTIONAL",
       imageUrl: images1, 
     },
     {
@@ -95,33 +95,24 @@ const ImageCard = ({ title, subtitle, imageUrl }) => (
           objectFit: 'cover',
           transition: 'transform 0.3s ease',
           '&:hover': {
-            transform: 'scale(1.1)',
+            transform: 'scale(1.05)',
           },
         }}
       />
     </Zoom>
-    <CardContent
-    sx={{
-        position: 'absolute', // Positioning to overlay on the image
-        bottom: 0, // Align to bottom
-        left: 0,
-        right: 0,
-        
-        padding: '10px', // Add padding around text
-      }}
-    >
+    <CardContent >
       <Typography 
         gutterBottom 
         variant="h6" 
         component="div" 
-        sx={{ fontWeight: '700', textAlign: 'center',color: '#fff',fontSize:'24px'  }} // Increased font weight for the title
+        sx={{ fontWeight: '700', textAlign: 'center',color: '#000',fontSize:'24px',  }} // Increased font weight for the title
       >
         {title}
       </Typography>
       <Typography 
         variant="body2" 
         color="text.secondary" 
-        sx={{ fontWeight: '500', textAlign: 'center',color:'#fff',fontSize:'16' }} // Increased font weight for the subtitle
+        sx={{ fontWeight: '500', textAlign: 'center',color:'#000',fontSize:'16' }} // Increased font weight for the subtitle
       >
         {subtitle}
       </Typography>
