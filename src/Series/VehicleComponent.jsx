@@ -60,96 +60,95 @@ const VehicleComponent = () => {
   const subSeriesData = {
     V80: {
       MOTOR: { text: 'BLDC Motor with 12 Months Warranty', img: motor },
-      battery: { text: 'Grapene ion Lithium ion 60V 30AH', img: battery },
+      battery: { text: 'Lead Acid / Lithium ion 60V 30AH', img: battery },
       topspeed: { text: '25KMPH', img: speed },
-      charger: { text: '60V 3AH 4-5Hrs', img: charger },
+      charger: { text: '60V 30Amp 5-6Hrs', img: charger },
       
     },
     G80: {
       motor: { text: 'BLDC Motor with 12 Months Warranty', img: motor },
-      battery: { text: 'Grapene ion Lithium ion 60V 30AH', img: battery },
+      battery: { text: 'Lead Acid / Lithium ion 60V 30AH', img: battery },
       topspeed: { text: '25KMPH', img: speed },
-      charger: { text: '60V 3AH 4-5Hrs', img: charger },
-      
+      charger: { text: '60V 30Amp 5-6Hrs', img: charger },
     },
     Z80: {
         motor: { text: 'BLDC Motor with 12 Months Warranty', img: motor },
-        battery: { text: 'Grapene ion Lithium ion 60V 30AH', img: battery },
+        battery: { text: 'Lead Acid / Lithium ion 60V 30AH', img: battery },
         topspeed: { text: '25KMPH', img: speed },
-        charger: { text: '60V 3AH 4-5Hrs', img: charger },
+        charger: { text: '60V 30Amp 5-6Hrs', img: charger },
        
       },
     D80: {
         motor: { text: 'BLDC Motor with 18 Months Warranty', img: motor },
-        battery: { text: 'Grapene ion Lithium ion 60V 30AH', img: battery },
+        battery: { text: 'Lead Acid / Lithium ion 60V 30AH', img: battery },
        topspeed: { text: '25KMPH', img: speed },
-        charger: { text: '60V 3AH 4-5Hrs', img: charger  },
+       charger: { text: '60V 30Amp 5-6Hrs', img: charger },
         
       },
       Y80: {
         motor: { text: 'BLDC Motor with 12 Months Warranty', img: motor },
-        battery: { text: 'Grapene ion Lithium ion 60V 30AH', img: battery },
+        battery: { text: 'Lead Acid / Lithium ion 60V 30AH', img: battery },
         topspeed: { text: '25KMPH', img: speed},
-        charger: { text: '60V 3AH 4-5Hrs', img: charger },
+        charger: { text: '60V 30Amp 5-6Hrs', img: charger },
       
       },
       P80: {
         motor: { text: 'BLDC Motor with 12 Months Warranty', img: motor },
-        battery: { text: 'Grapene ion Lithium ion 60V 30AH', img: battery },
+        battery: { text: 'Lead Acid / Lithium ion 60V 30AH', img: battery },
         topspeed: { text: '25KMPH', img: speed },
-        charger: { text: '60V 3AH 4-5Hrs', img: charger },
+        charger: { text: '60V 30Amp 5-6Hrs', img: charger },
         
       },
     V150: {
       motor: { text: 'BLDC Motor with 12 Months Warranty', img: motor },
-      battery: { text: 'Lithium ion 60V 40AH', img: battery },
+      battery: { text: 'Lead Acid / Lithium ion 60V 30AH', img: battery },
       topspeed: { text: '55KMPH', img: speed },
-      charger: { text: '60V 6AH 4-5Hrs', img: charger },
+      charger: { text: '60V 30Amp 5-6Hrs', img: charger },
       
     },
     G150: {
       motor: { text: 'BLDC Motor with 12 Months Warranty', img: motor },
-      battery: { text: 'Lithium ion 60V 40AH', img: battery},
+      battery: { text: 'Lead Acid / Lithium ion 60V 30AH', img: battery },
       topspeed: { text: '50KMPH', img: speed },
-      charger: { text: '60V 6AH Charger', img: charger },
+      charger: { text: '60V 30Amp 5-6Hrs', img: charger },
       
     },
     C80_CARGO: {
         motor: { text: 'BLDC Motor with 12 Months Warranty', img: motor },
-        battery: { text: 'Grapene ion Lithium ion 60V 30AH', img: battery },
+        battery: { text: 'Lead Acid / Lithium ion 60V 30AH', img: battery },
         topspeed: { text: '25KMPH', img: speed },
-        charger: { text: '60V 3AH 4-5Hrs', img: charger },
+        charger: { text: '60V 30Amp 5-6Hrs', img: charger },
       
     },
     METAL_CARGO_2W: {
         motor: { text: 'BLDC Motor with 12 Months Warranty', img: motor },
-        battery: { text: 'Grapene ion Lithium ion 60V 30AH', img: battery },
+        battery: { text: 'Lead Acid / Lithium ion 60V 30AH', img: battery },
         topspeed: { text: '25KMPH', img: speed },
-        charger: { text: '60V 3AH 4-5Hrs', img: charger},
+        charger: { text: '60V 30Amp 5-6Hrs', img: charger },
       
     },
     METAL_CARGO_3W: {
         motor: { text: 'BLDC Motor with 12 Months Warranty', img: motor },
-        battery: { text: 'Grapene ion Lithium ion 60V 30AH', img: battery },
+        battery: { text: 'Lead Acid / Lithium ion 60V 30AH', img: battery },
         topspeed: { text: '25KMPH', img: speed },
-        charger: { text: '60V 3AH 4-5Hrs', img: charger },
+        charger: { text: '60V 30Amp 5-6Hrs', img: charger },
      
     },
   };
 
   const priceData = {
    
-      V80: { Graphene: 'MRP ₹57,999* /-', Lithium: 'MRP ₹72,999* /-' },
-      G80: { Graphene: 'MRP ₹56,999* /-', Lithium: 'MRP ₹71,999* /-' },
-      Z80: { Graphene: 'MRP ₹49,999* /-', Lithium: 'MRP ₹69,999* /-' },
-      D80: { Graphene: 'MRP ₹51,999* /-', Lithium: 'MRP ₹71,999* /-' },
-      Y80: { Graphene: 'MRP ₹56,999* /-', Lithium: 'MRP ₹76,999* /-' },
-      P80: { Graphene: 'MRP ₹62,999* /-', Lithium: 'MRP ₹77,999* /-' },
+      V80: { Leadacid: 'MRP ₹57,999* /-', Lithium: 'MRP ₹72,999* /-' },
+      G80: { Leadacid: 'MRP ₹56,999* /-', Lithium: 'MRP ₹71,999* /-' },
+      Z80: { Leadacid: 'MRP ₹49,999* /-', Lithium: 'MRP ₹69,999* /-' },
+      D80: { Leadacid: 'MRP ₹51,999* /-', Lithium: 'MRP ₹71,999* /-' },
+      Y80: { Leadacid: 'MRP ₹56,999* /-', Lithium: 'MRP ₹76,999* /-' },
+      P80: { Leadacid: 'MRP ₹62,999* /-', Lithium: 'MRP ₹77,999* /-' },
       V150: { },
       G150: {  },
       C80_CARGO: { Lithium: 'MRP ₹72,999* /-' },
-      METAL_CARGO_2W: { Graphene: 'MRP ₹59,999* /-', Lithium: 'MRP ₹74,999* /-' },
-      METAL_CARGO_3W: { Graphene: 'MRP ₹66,999* /-', Lithium: 'MRP ₹81,999* /-' },
+      METAL_CARGO_2W: { Leadacid: 'MRP ₹59,999* /-', Lithium: 'MRP ₹74,999* /-' },
+      METAL_CARGO_3W: { Leadacid: 'MRP ₹66,999* /-', Lithium: 'MRP ₹81,999* /-' },
     };
   
 
@@ -422,7 +421,7 @@ const VehicleComponent = () => {
     <Box
       sx={{
         padding: '15px',
-        backgroundColor: selectedBattery === 'Graphene Ion' ? 'orange' : 'grey',
+        backgroundColor: selectedBattery === 'Leadacid' ? 'orange' : 'grey',
         boxShadow: 3,
         borderRadius: '8px',
         height: '60px',
@@ -435,9 +434,9 @@ const VehicleComponent = () => {
         fontSize: '18px',
         fontWeight: 'bold',
       }}
-      onClick={() => setSelectedBattery('Graphene Ion')}
+      onClick={() => setSelectedBattery('Leadacid')}
     >
-      GRAPHENE ION
+      LEAD ACID BATTERY
     </Box>
     <Box
       sx={{
@@ -457,7 +456,7 @@ const VehicleComponent = () => {
       }}
       onClick={() => setSelectedBattery('Lithium Ion')}
     >
-      LITHIUM ION
+      LITHIUM ION BATTERY
     </Box>
   </Box>
 
@@ -479,7 +478,7 @@ const VehicleComponent = () => {
       fontSize: { xs: '24px', sm: '28px' }, // Larger font on small screens
     }}
   >
-    {selectedBattery === 'Graphene Ion' ? priceData[selectedSubSeries].Graphene : priceData[selectedSubSeries].Lithium} 
+    {selectedBattery === 'Leadacid' ? priceData[selectedSubSeries].Leadacid : priceData[selectedSubSeries].Lithium} 
   </Typography>
   <Button
     variant="contained"

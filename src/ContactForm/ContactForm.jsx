@@ -83,7 +83,7 @@ const ContactForm = () => {
                   label="Email"
                   variant="outlined"
                   fullWidth
-                  required
+               
                   className="form-field"
                   InputProps={{
                     disableUnderline: true,
@@ -103,7 +103,7 @@ const ContactForm = () => {
                   label="State"
                   variant="outlined"
                   fullWidth
-                  required
+                
                   className="form-field"
                   InputProps={{
                     disableUnderline: true,
