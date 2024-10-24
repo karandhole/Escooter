@@ -386,7 +386,7 @@ const VehicleComponent = () => {
             <Typography variant="body1" sx={{ fontWeight: 'bold', fontSize: '18px' }}> {/* Slightly reduced font size */}
               {key.toUpperCase()}
             </Typography>
-            <Typography variant="body2" sx={{ fontSize: '16px', fontStyle: 'italic' }}> {/* Reduced font size */}
+            <Typography variant="body2" sx={{ fontSize: '13px', fontWeight:'400' }}> {/* Reduced font size */}
               {value.text}
             </Typography>
           </Box>
@@ -463,7 +463,7 @@ const VehicleComponent = () => {
 
   <Box
   sx={{
-    backgroundColor: 'white', // Set background color to gray
+    backgroundColor: '#e6e4df', // Set background color to gray
     padding: '16px', // Add some padding for aesthetics
     borderRadius: '8px', // Optional: Add rounded corners
     display: 'flex', // Use flexbox to align items in a row
