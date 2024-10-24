@@ -19,7 +19,7 @@ import d4 from '../../src/website product/D80 black.png';
 import y1 from '../../src/website product/Y80silver.jpeg';
 import y2 from '../../src/website product/Y80 white.png';
 import p1 from '../../src/website product/P80 red.jpeg';
-import c1 from '../../src/website product/C 80.png';
+import c1 from '../../src/assets/C-Yellow (1).png';
 import DirectionsBikeIcon from '@mui/icons-material/DirectionsBike';
 import SpeedIcon from '@mui/icons-material/Speed';
 import LocalShippingIcon from '@mui/icons-material/LocalShipping';
@@ -431,7 +431,7 @@ const VehicleComponent = () => {
         cursor: 'pointer',
         width: { xs: '100%', sm: '47%' }, // Full width on small screens
         color: 'black',
-        fontSize: '18px',
+        fontSize:{ xs: '14px', sm: '16px' },
         fontWeight: 'bold',
       }}
       onClick={() => setSelectedBattery('Leadacid')}
@@ -451,7 +451,7 @@ const VehicleComponent = () => {
         cursor: 'pointer',
         width: { xs: '100%', sm: '47%' }, // Full width on small screens
         color: 'white',
-        fontSize: '18px',
+        fontSize:{ xs: '14px', sm: '16px' },
         fontWeight: 'bold',
       }}
       onClick={() => setSelectedBattery('Lithium Ion')}
@@ -475,11 +475,16 @@ const VehicleComponent = () => {
     variant="h6"
     sx={{
       fontWeight: 'bold',
-      fontSize: { xs: '24px', sm: '28px' }, // Larger font on small screens
+      fontSize: { xs: '18px', sm: '28px' }, // Larger font on small screens
     }}
   >
     {selectedBattery === 'Leadacid' ? priceData[selectedSubSeries].Leadacid : priceData[selectedSubSeries].Lithium} 
+    <br/>
+    <Typography >
+    <p>Inclusive of GST</p>
   </Typography>
+  </Typography>
+ 
   <Button
     variant="contained"
     sx={{
