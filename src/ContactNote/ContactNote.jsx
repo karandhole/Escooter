@@ -31,7 +31,7 @@ const ContactNote = () => {
         >
           CALL US TO KNOW MORE ABOUT THE <br/>E-SCOOTER
         </Typography>
-        <Typography variant="body1" sx={{ color: '#555',fontSize:'20px',fontWeight:'500' }}>
+        <Typography variant="body1" sx={{ color: '#856c19',fontSize:'20px',fontWeight:'600' }}>
           10am - 6pm Weekdays
         </Typography>
       </Box>
