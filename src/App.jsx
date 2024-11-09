@@ -15,6 +15,7 @@ import FAQ from './Pages/Faq'
 import VedioSection from './VedioSection/VedioSection'
 import ImageCarousel from './ImageSection/ImageCarousel'
 import IconBar from './HeroSection/IconBar'
+import BrandPartners from './Logoslider/Logoslider';
 
 
 
@@ -35,6 +36,7 @@ function App() {
      
      <VedioSection/>
      <ImageCarousel/>
+     <BrandPartners/>
       <Footer/>
       </ThemeProvider>
     </>

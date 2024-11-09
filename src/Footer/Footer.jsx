@@ -3,7 +3,7 @@ import { Box, Typography, Grid, Link, IconButton } from '@mui/material';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 import FacebookIcon from '@mui/icons-material/Facebook';
-import TwitterIcon from '@mui/icons-material/Twitter';
+import XIcon from '@mui/icons-material/X';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import PhoneAndroidIcon from '@mui/icons-material/PhoneAndroid';
 import EmailIcon from '@mui/icons-material/Email';
@@ -46,7 +46,7 @@ const Footer = () => {
                 <FacebookIcon />
               </IconButton>
               <IconButton href="#" sx={{ color: 'black' }}>
-                <TwitterIcon />
+                <XIcon />
               </IconButton>
               <IconButton href="#" sx={{ color: 'black' }}>
                 <InstagramIcon />
@@ -98,6 +98,7 @@ const Footer = () => {
               <LocationOnIcon/> Exerval Private Limited, Exer Energy, GAT No – 309/3, Opposite to AMG Corporation, 
               Kuruli Murhe Vasti Road, Kurali, Chakan, Pune, Maharashtra 410501
             </Link>
+            
           </Box>
         </Grid>
       </Grid>
