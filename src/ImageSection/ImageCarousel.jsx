@@ -2,6 +2,7 @@ import React, { useRef, useEffect } from 'react';
 import { Box, Grid, IconButton, Typography } from '@mui/material';
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import LinearProgress from '@mui/material/LinearProgress';
 
 import exer3 from '../Vediophotos/exer3.jpeg';
 import exer4 from '../Vediophotos/exer4.jpeg';
@@ -54,8 +55,30 @@ const ImageCarousel = () => {
   return (
     <Box sx={{ position: 'relative', width: '100%', height: { xs: '60vh', sm: '55vh', md: '65vh' }, overflow: 'hidden', padding: 2 }}>
       {/* Title */}
-      <Typography sx={{ textAlign: 'center', paddingTop: '10px', paddingBottom: '10px', fontSize: { xs: '20px', md: '24px' } }}>
+      <Typography sx={{ textAlign: 'center', paddingTop: '10px', paddingBottom: '10px', fontSize: { xs: '20px', md: '2rem' } }}>
         <h3>Our Campaigns</h3>
+        <Box
+  sx={{
+    width: '10%',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    margin: '0 auto', // Center the box horizontally
+  }}
+>
+  <LinearProgress
+    variant="determinate" // Make it static (no animation)
+    value={100} // Set to 100% to fill the progress bar
+    sx={{
+      width: '100%',
+      '& .MuiLinearProgress-bar': {
+        backgroundColor: '#FFDB58', // Mustard yellow color
+      },
+      backgroundColor: '#e0e0e0', // Light grey background for the bar
+    }}
+  />
+</Box>
+
       </Typography>
 
       {/* Left Scroll Button */}

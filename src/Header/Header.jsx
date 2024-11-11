@@ -12,6 +12,7 @@ import {
   ListItem,
   ListItemText,
 } from '@mui/material';
+import { Link } from 'react-router-dom'; // Import Link for navigation
 import CloseIcon from '@mui/icons-material/Close';
 import SearchIcon from '@mui/icons-material/Search';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
@@ -29,7 +30,6 @@ const Header = () => {
 
   const placeholders = ["Search for 'E-Scooter'", "Search for 'Bicycles'", "Search for 'Accessories'"];
 
-  // Function to cycle through placeholders
   useEffect(() => {
     const interval = setInterval(() => {
       setSearchPlaceholder((prev) => {
@@ -49,14 +49,20 @@ const Header = () => {
     setMobileOpen(!mobileOpen); // Toggle mobile menu
   };
 
-  const NavBarLinks = ['E-Scooter', 'E-Bicycles',  'Rental','Toys', 'Accessories'];
+  const NavBarLinks = [
+    { name: 'E-Scooter', path: '/' },
+    // { name: 'E-Bicycles', path: '/' },
+    // { name: 'Rental', path: '/' },
+    // { name: 'Toys', path: '/' },
+    { name: 'Contact Us', path: '/Contact/Contact.jsx' }, // Set path for Contact Us
+  ];
 
   const drawer = (
-    <Box sx={{ width: 250 }}> {/* Reduced width for mobile drawer */}
+    <Box sx={{ width: 250 }}> {/* Adjust width for mobile drawer */}
       <List>
-        {NavBarLinks.map((text) => (
-          <ListItem button key={text}>
-            <ListItemText primary={text} />
+        {NavBarLinks.map((link) => (
+          <ListItem button key={link.name} component={Link} to={link.path}>
+            <ListItemText primary={link.name} />
           </ListItem>
         ))}
       </List>
@@ -93,9 +99,9 @@ const Header = () => {
             src={logo}
             alt="Logo"
             style={{
-              height: 'auto', // Maintain aspect ratio
-              width: '100%', // Full width for responsiveness
-              maxWidth: '300px', // Set max width for larger screens
+              height: 'auto',
+              width: '100%',
+              maxWidth: '300px',
             }}
           />
         </Box>
@@ -103,7 +109,7 @@ const Header = () => {
           sx={{
             display: 'flex',
             alignItems: 'center',
-            width: { xs: '40%', sm: '50%', md: '40%', lg: '20%' }, // Adjust width based on screen size
+            width: { xs: '40%', sm: '50%', md: '40%', lg: '20%' },
             marginLeft: { xs: '0', sm: '0', md: '80px' },
           }}
         >
@@ -112,9 +118,9 @@ const Header = () => {
             startAdornment={<SearchIcon />}
             sx={{
               backgroundColor: '#f1f1f1',
-              padding: '5px 10px', // Adjust padding for smaller size
+              padding: '5px 10px',
               borderRadius: '25px',
-              width: '100%', // Full width
+              width: '100%',
               '&:hover': {
                 backgroundColor: '#e0e0e0',
               },
@@ -122,12 +128,14 @@ const Header = () => {
           />
         </Box>
 
-        {/* Navigation Links with Hover Effect */}
+        {/* Desktop Navigation Links */}
         <Box sx={{ display: { xs: 'none', md: 'flex' }, gap: '18px' }}>
           {NavBarLinks.map((link, index) => (
             <Button
               key={index}
               color="inherit"
+              component={Link} // Use Link component for routing
+              to={link.path} // Set path for each link
               sx={{
                 fontSize: '15px',
                 textTransform: 'none',
@@ -149,7 +157,7 @@ const Header = () => {
                 },
               }}
             >
-              {link}
+              {link.name}
             </Button>
           ))}
         </Box>
@@ -159,7 +167,7 @@ const Header = () => {
           edge="start"
           color="inherit"
           aria-label="menu"
-          sx={{ display: { xs: 'flex', md: 'none' }, color: 'black' ,gap: { xs: '4px', md: '0px' } }}
+          sx={{ display: { xs: 'flex', md: 'none' }, color: 'black', gap: { xs: '4px', md: '0px' } }}
           onClick={toggleMobileMenu}
         >
           <MenuIcon />
@@ -168,15 +176,7 @@ const Header = () => {
 
       {/* Drawer for Mobile Menu */}
       <Drawer anchor="left" open={mobileOpen} onClose={toggleMobileMenu}>
-        <Box sx={{ width: 250 }}> {/* Adjust width for mobile drawer */}
-          <List>
-            {NavBarLinks.map((text) => (
-              <ListItem button key={text} sx={{ padding: '10px' }}>
-                <ListItemText primary={text} />
-              </ListItem>
-            ))}
-          </List>
-        </Box>
+        {drawer}
       </Drawer>
     </AppBar>
   );

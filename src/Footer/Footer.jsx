@@ -36,19 +36,19 @@ const Footer = () => {
               Follow Us
             </Typography>
             <Box sx={{ display: 'flex', justifyContent: { xs: 'center', md: 'center' }, gap: '10px' , alignItems:'center'}}>
-              <IconButton href="#" sx={{ color: 'black' }}>
+              <IconButton href="https://www.linkedin.com/company/exer-energy/posts/?feedView=all" target='_blank' sx={{ color: 'black' }}>
                 <LinkedInIcon />
               </IconButton>
-              <IconButton href="#" sx={{ color: 'black' }}>
+              <IconButton href="https://www.youtube.com/@ExerMobility" target='_blank'  sx={{ color: 'black' }}>
                 <YouTubeIcon />
               </IconButton>
-              <IconButton href="#" sx={{ color: 'black' }}>
+              <IconButton href="https://www.facebook.com/exerenergy" target='_blank'  sx={{ color: 'black' }}>
                 <FacebookIcon />
               </IconButton>
-              <IconButton href="#" sx={{ color: 'black' }}>
+              <IconButton href="#" target='_blank'  sx={{ color: 'black' }}>
                 <XIcon />
               </IconButton>
-              <IconButton href="#" sx={{ color: 'black' }}>
+              <IconButton href="#" target='_blank'  sx={{ color: 'black' }}>
                 <InstagramIcon />
               </IconButton>
             </Box>

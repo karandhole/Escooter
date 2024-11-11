@@ -1,46 +1,30 @@
-import { useState } from 'react'
-import { ThemeProvider } from '@mui/material/styles';
-import theme from './theme';
-import './App.css'
-import Header from './Header/Header'
-import VehicleComponent from './Series/VehicleComponent'
-import Footer from './Footer/Footer'
-import ContactForm from './ContactForm/ContactForm'
-import ContactNote from './ContactNote/ContactNote'
-import Slider from './Slider/Slider'
-import DesignPerformanceTabs from './Pages/DesignPerformanceTabs'
-import FAQ from './Pages/Faq'
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Header from './Header/Header'; // Adjust the path if needed
+import Footer from './Footer/Footer';
+// import EScooter from './pages/EScooter';
+// import EBicycles from './pages/EBicycles';
+// import Rental from './pages/Rental';
+// import Toys from './pages/Toys';
 
+import Contact from './Contact/Contact';
+import HomePage from './Homepage/Homepage';
 
-import VedioSection from './VedioSection/VedioSection'
-import ImageCarousel from './ImageSection/ImageCarousel'
-import IconBar from './HeroSection/IconBar'
-import BrandPartners from './Logoslider/Logoslider';
-
-
-
-function App() {
-  const [count, setCount] = useState(0)
-
+const App = () => {
   return (
-    <>
-   <ThemeProvider theme={theme}>
-      <Header/>
-      <IconBar/>
-      <Slider/>
-      <VehicleComponent/>
-      <ContactForm/>
-      <DesignPerformanceTabs/>
-      <FAQ/>
-      <ContactNote/>
-     
-     <VedioSection/>
-     <ImageCarousel/>
-     <BrandPartners/>
+    <Router>
+      <Header />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        {/* <Route path="/e-scooter" element={<EScooter />} />
+        <Route path="/e-bicycles" element={<EBicycles />} />
+        <Route path="/rental" element={<Rental />} />
+        <Route path="/toys" element={<Toys />} /> */}
+        <Route path="/Contact/Contact.jsx" element={<Contact/>} />
+      </Routes>
       <Footer/>
-      </ThemeProvider>
-    </>
-  )
-}
+    </Router>
+  );
+};
 
-export default App
+export default App;
