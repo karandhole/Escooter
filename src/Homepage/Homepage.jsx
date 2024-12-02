@@ -14,6 +14,13 @@ import VedioSection from '../VedioSection/VedioSection';
 import ImageCarousel from '../ImageSection/ImageCarousel';
 import IconBar from '../HeroSection/IconBar';
 import BrandPartners from '../Logoslider/Logoslider';
+import ProductSlider from '../Slider/Productslider';
+
+
+
+
+
+
 
 function HomePage() {
   const [count, setCount] = useState(0);
@@ -23,6 +30,7 @@ function HomePage() {
       {/* <Header /> */}
       <IconBar />
       <Slider />
+      <ProductSlider/>
       <VehicleComponent />
       <ContactForm />
       <DesignPerformanceTabs />

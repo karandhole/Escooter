@@ -5,7 +5,7 @@ import 'swiper/css/pagination'; // Import pagination style (optional)
 import { Pagination, Autoplay } from 'swiper/modules'; // Import Pagination and Autoplay
 import { Box, IconButton } from '@mui/material';
 import { ArrowBackIos, ArrowForwardIos } from '@mui/icons-material'; // Import Material-UI Icons
-import img1 from '../assets/slider1.png';
+import img1 from '../assets/banner4.jpg';
 import img2 from '../assets/slider2.png';
 import img3 from '../assets/slider3.png';
 
@@ -37,7 +37,8 @@ const ImageSlider = () => {
         px: 0, // Remove horizontal padding
         overflow: 'hidden', // Ensure no horizontal scrollbars
         '@media (max-width: 600px)': {
-          width: '100vw', // Ensure it remains full width on mobile
+          width: '100vw', 
+      // Ensure it remains full width on mobile
         },
       }}
     >

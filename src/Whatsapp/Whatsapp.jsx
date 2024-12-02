@@ -15,7 +15,7 @@ const WhatsAppChatButton = () => {
       <IconButton
         color="primary"
         aria-label="Chat on WhatsApp"
-        href="https://wa.me/9146476987" // Replace with your WhatsApp link
+        href="https://wa.me/+918956301542" // Replace with your WhatsApp link
         target="_blank"
         sx={{
           bgcolor: '#25D366',

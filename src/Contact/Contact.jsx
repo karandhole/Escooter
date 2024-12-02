@@ -34,10 +34,10 @@ const Contact = () => {
         e.preventDefault();
         emailjs
             .send(
-                'service_d183ppx', // Replace with your EmailJS Service ID
-                'template_0w6595m', // Replace with your EmailJS Template ID
+                'service_pern4qr', // Replace with your EmailJS Service ID
+                'template_3l668ze', // Replace with your EmailJS Template ID
                 formData,
-                'ePw0GvkteEaZWqfJF' // Replace with your EmailJS User ID
+                'PVSmNzDFhbhSB9RPQ' // Replace with your EmailJS User ID
             )
             .then(
                 (response) => {
@@ -159,7 +159,7 @@ const Contact = () => {
                                         rows={4}
                                         name="message"
                                         variant="outlined"
-                                        required
+                                        
                                         value={formData.message}
                                         onChange={handleChange}
                                     />

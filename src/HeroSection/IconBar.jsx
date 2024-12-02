@@ -135,55 +135,7 @@ const IconBar = () => {
           </Typography>
         </Box>
 
-        {/* Electric Bike Icon */}
-        <Box
-          sx={{
-            display: 'flex',
-            alignItems: 'center',
-            color: 'white',
-          }}
-        >
-          <IconButton
-            aria-label="Electric Bike"
-            sx={{
-              color: 'white',
-              '&:hover': { color: 'green' },
-              '@media (max-width: 600px)': {
-                p: 0,
-              },
-            }}
-            onClick={() => alert('Electric Bike clicked')}
-          >
-            <img
-              src={ebike}
-              alt="Electric Bike"
-              style={{
-                width: '40px',
-                height: '40px',
-                borderRadius: '40px',
-                border: '2px solid white',
-                '@media (max-width: 600px)': {
-                  width: '30px',
-                  height: '30px',
-                },
-              }}
-            />
-          </IconButton>
-          <Typography
-            sx={{
-              color: 'white',
-              fontSize: '12px',
-              '&:hover': { color: 'green' },
-              ml: '5px',
-              '@media (max-width: 600px)': {
-                fontSize: '10px',
-                ml: '3px',
-              },
-            }}
-          >
-            Electric Bike
-          </Typography>
-        </Box>
+       
       </Box>
 
       {/* Special Offer Icon aligned to the right */}
